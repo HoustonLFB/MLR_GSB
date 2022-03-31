@@ -56,6 +56,16 @@ h4 {
     border-radius: 0px 0px 10px 10px;
     padding: 10px 10px 10px 10px;
     background-color: #77aadd;
+    cursor:pointer;
+}
+#connexion:hover {
+    background-color: #6490bb;
+    color: #daf9fc;
+    text-decoration: none;
+}
+#connexion:active {
+    background-color: #54789c;
+    text-decoration: none;
 }
 /*
 **************************************************************************************************
