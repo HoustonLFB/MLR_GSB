@@ -7,7 +7,7 @@ $url = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 
 $redSQL = "INSERT INTO historique VALUES ('$IP', '$url')";
 
-$connexion->exec($redSQL);
+$connexion->exec($reqSQL);
 
 
 ?>
