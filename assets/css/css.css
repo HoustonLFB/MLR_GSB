@@ -19,6 +19,13 @@ body{
 .center{
     text-align: center;
 }
+h1 {
+    text-align: center
+}
+h4 {
+    color : #ffffff ;
+    text-align: center;  
+}
 /*
 **************************************************************************************************
 *      Login     *********************************************************************************
@@ -55,3 +62,31 @@ body{
 *      Accueil     *******************************************************************************
 **************************************************************************************************
 */
+#RapportdeVisite {
+    border: 2px double #000000;
+    border-radius: 20px;
+    margin-left: 200px;
+    margin-right: 1000px;
+    background-color: aquamarine;
+}
+#ConsultationdesRapports {
+    border: 2px double #000000;
+    border-radius: 20px;
+    margin-left: 200px;
+    margin-right: 1000px;
+    background-color: aquamarine;
+}
+#Medicament {
+    border: 2px double #000000;
+    border-radius: 20px;
+    margin-left: 200px;
+    margin-right: 1000px;
+    background-color: aquamarine;
+}
+#Praticien {
+    border: 2px double #000000;
+    border-radius: 20px;
+    margin-left: 200px;
+    margin-right: 1000px;
+    background-color: aquamarine;
+}
