@@ -1,14 +1,32 @@
+<?php
+
+include('connexionBDD.php');
+
+$IP = $_SERVER['REMOTE_ADDR'];
+$url = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+
+$redSQL = "INSERT INTO historique VALUES ('$IP', '$url')";
+
+$connexion->exec($redSQL);
+
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="assets/css/css.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Se connecter - GSB</title>
 </head>
+
 <body>
     <header>
-        <div  class="center">
+        <div class="center">
             <img id="logo" src="assets/img/logo-gsb.png">
         </div>
     </header>
@@ -30,4 +48,5 @@
         CONNEXION
     </div>
 </body>
+
 </html>
