@@ -67,26 +67,34 @@ h4 {
     border-radius: 20px;
     margin-left: 200px;
     margin-right: 1000px;
+    margin-top: 50px;
     background-color: aquamarine;
+    padding: 25px 0px 25px 5px;    
 }
 #ConsultationdesRapports {
     border: 2px double #000000;
     border-radius: 20px;
-    margin-left: 200px;
-    margin-right: 1000px;
+    margin-left: 1000px;
+    margin-right: 100px;
+    margin-top: 50px;
     background-color: aquamarine;
+    padding: 25px 5px 25px 5px;
 }
 #Medicament {
     border: 2px double #000000;
     border-radius: 20px;
     margin-left: 200px;
     margin-right: 1000px;
+    margin-top: 50px;
     background-color: aquamarine;
+    padding: 25px 5px 25px 5px;
 }
 #Praticien {
     border: 2px double #000000;
     border-radius: 20px;
     margin-left: 200px;
     margin-right: 1000px;
+    margin-top: 50px;
     background-color: aquamarine;
+    padding: 25px 5px 25px 5px;
 }
