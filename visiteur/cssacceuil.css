@@ -1,13 +1,39 @@
 h1 {
     text-align: center
+
 }
 
 h4 {
-    color : #024747 ;
-    border-width: 2px ;
-    border-color : color black;
+    color : #fa06bd ;
+    text-align: center;
+
+}
+#RapportdeVisite {
+    border: 2px double #7bebff;
+    margin-left: 200px;
+    margin-right: 1000px;
+
+}
+#ConsultationdesRapports {
+    border: 2px double #7bebff;
+    margin-left: 200px;
+    margin-right: 1000px;
+
+}
+#Medicament {
+    border: 2px double #7bebff;
+    margin-left: 200px;
+    margin-right: 1000px;
+
+}
+#Praticien {
+    border: 2px double #7bebff;
+    margin-left: 200px;
+    margin-right: 1000px;
+
 }
 
 body {
     background: url("arriere.jpg") no-repeat center center fixed ;
+
 }
