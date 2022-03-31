@@ -50,6 +50,15 @@ h4 {
     width: 30%;
     margin-top: -15%;
 }
+#userid{
+    margin-top: 50px;
+}
+#motdepasse{
+    margin-top: 50px;
+}
+#oublie{
+    margin-top: 50px;
+}
 #connexion{
     margin-top: 0px;
     margin-left: auto;
