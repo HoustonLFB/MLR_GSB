@@ -31,16 +31,16 @@ $connexion->exec($reqSQL);
             <img id="logo" src="assets/img/logo-gsb.png">
         </div>
     </header>
-    <form action="deploy.php">
+    <form name="connexform" action="login.php" method="POST">
         <div id='login' class='center'>
             <div>
                 <img id='user' src='assets/img/user.png'>
             </div>
             <div>
-                <input type="text" id="userid" name="name" required minlength="0" maxlength="20">
+                <input type="text" id="userlog" name="userlog" required minlength="0" maxlength="20">
             </div>
             <div>
-                <input type="password" id="motdepasse" name="name" required minlength="0" maxlength="20">
+                <input type="password" id="userpass" name="userpass" required minlength="0" maxlength="20">
             </div>
             <div id='oublie'>
                 <p href="">Mot de passe oublié ?</p>

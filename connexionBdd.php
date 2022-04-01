@@ -3,7 +3,7 @@
 $hote = "localhost";
 $login = "pma";
 $mdp = "&#Q2uwMCeGy9";
-$nombd = "ressources";
+$nombd = "mlr_gsb";
 
 // Connection au serveur
 try {
