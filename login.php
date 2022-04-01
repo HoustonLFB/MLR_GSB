@@ -1,6 +1,8 @@
 <?php
 session_start();
 
+include('connexionBdd.php');
+
 $userid = $_POST['userlog'];
 $userpass = $_POST['userpass'];
 
