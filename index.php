@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 
 include('connexionBdd.php');
 
@@ -6,8 +8,6 @@ $IP = $_SERVER['REMOTE_ADDR'];
 $url = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 
 $reqSQL = "INSERT INTO historique VALUES ('$IP', '$url')";
-
-echo ($reqSQL);
 
 $connexion->exec($reqSQL);
 
@@ -45,8 +45,8 @@ $connexion->exec($reqSQL);
             <p href="">Mot de passe oublié ?</p>
         </div>
     </div>
-    <div id='connexion' class='center'>
-        CONNEXION
+    <input type="submit" id='connexion' class='center'>
+    CONNEXION
     </div>
 </body>
 
