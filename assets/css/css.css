@@ -68,6 +68,7 @@ h4 {
     padding: 10px 10px 10px 10px;
     background-color: #77aadd;
     cursor:pointer;
+    display: flex;
 }
 #connexion:hover {
     background-color: #6490bb;

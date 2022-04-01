@@ -1,4 +1,5 @@
 <?php
+//OUVERTURE SESSION
 session_start();
 
 
@@ -10,7 +11,6 @@ $url = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 $reqSQL = "INSERT INTO historique VALUES ('$IP', '$url')";
 
 $connexion->exec($reqSQL);
-
 ?>
 
 
@@ -31,23 +31,23 @@ $connexion->exec($reqSQL);
             <img id="logo" src="assets/img/logo-gsb.png">
         </div>
     </header>
-    <div id='login' class='center'>
-        <div>
-            <img id='user' src='assets/img/user.png'>
+    <form action="deploy.php">
+        <div id='login' class='center'>
+            <div>
+                <img id='user' src='assets/img/user.png'>
+            </div>
+            <div>
+                <input type="text" id="userid" name="name" required minlength="0" maxlength="20">
+            </div>
+            <div>
+                <input type="password" id="motdepasse" name="name" required minlength="0" maxlength="20">
+            </div>
+            <div id='oublie'>
+                <p href="">Mot de passe oublié ?</p>
+            </div>
         </div>
-        <div>
-            <input type="text" id="userid" name="name" required minlength="0" maxlength="20">
-        </div>
-        <div>
-            <input type="password" id="motdepasse" name="name" required minlength="0" maxlength="20">
-        </div>
-        <div id='oublie'>
-            <p href="">Mot de passe oublié ?</p>
-        </div>
-    </div>
-    <input type="submit" id='connexion' class='center'>
-    CONNEXION
-    </div>
+        <input type="submit" id='connexion' class='center' value="CONNEXION">
+    </form>
 </body>
 
 </html>
