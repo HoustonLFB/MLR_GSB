@@ -1,9 +1,21 @@
+
+<?php
+session_start();
+
+
+
+
+//ECRIRE LE SITE ICI
+if ($_SESSION['logged'] && $_SESSION['NIVuser'] == 1) {
+    echo <<<HTML
+
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Accueil</title>
+        <title>Accueil visiteur - GSB</title>
         <link rel="stylesheet" href="../assets/css/css.css">
 		<meta charset=utf-8>
+
     </head>
     <body>
         <div class="Position">
@@ -26,3 +38,18 @@
     </body>
 
 </html>
+
+HTML;
+} else {
+    echo <<<HTML
+
+Vous n'avez pas accès à cette ressource. <br>
+
+<a href='../index.php'>Cliquez ici pour vous connecter</a>
+
+HTML;
+}
+
+
+
+?>
