@@ -13,8 +13,6 @@ $reqSQL = "INSERT INTO historique VALUES ('$IP', '$url')";
 $connexion->exec($reqSQL);
 ?>
 
-
-
 <!DOCTYPE html>
 <html lang="fr">
 
