@@ -45,7 +45,7 @@ HTML;
 
 Vous n'avez pas accès à cette ressource. <br>
 
-<a href='../index.php'>Cliquez ici pour vous connecter</a>
+<a href='../'>Cliquez ici pour vous connecter</a>
 
 HTML;
 }
