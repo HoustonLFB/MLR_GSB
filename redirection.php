@@ -9,6 +9,7 @@ $NIVuser = $_SESSION['NIVuser'];
 // 3 = responsable
 switch ($NIVuser) {
     case 1:
+        header_remove();
         header('Location : http://gsb.wilfriedlefebvre.fr/visiteur/accueil.php');
         break;
     case 2:
