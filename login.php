@@ -11,14 +11,17 @@ $resultatDB = $connexion->query($reqSQLlogin);
 
 $ligneDB = $resultatDB->fetch();
 $passBD = $ligneDB[1];
-$IDuser = $ligneDB[3];
+$IDuser = $ligneDB[2];
+$NIVuser = $ligneDB[3];
 
 $ok = password_verify($userpass, $passBD);
 
 if ($ok) {
+    //VARIABLES DE SESSION DES INFOS DE L'USER
     $_SESSION['logged'] = True;
     $_SESSION['IDuser'] = $IDuser;
-    header("Location: /deploy.php");
+    $_SESSION['NIVuser'] = $NIVuser;
+    header("Location: /redirection.php");
 } else {
     header("Location: /index.php");
 }
