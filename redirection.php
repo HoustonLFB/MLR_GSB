@@ -9,7 +9,8 @@ $NIVuser = $_SESSION['NIVuser'];
 // 3 = responsable
 switch ($NIVuser) {
     case 1:
-        include('visiteur/accueil.php');
+        header_remove('redirection.php');
+        header('Location : /visiteur/accueil.php');
         break;
     case 2:
         header('Location : /delegue/accueil.php');
