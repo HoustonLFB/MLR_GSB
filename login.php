@@ -9,6 +9,11 @@ $userpass = $_POST['userpass'];
 $reqSQLlogin = "SELECT * FROM compte WHERE user='$userid'";
 $resultatDB = $connexion->query($reqSQLlogin);
 
+if ($resultatDB !== 1) {
+    header("Location: /index.php/");
+    exit();
+}
+
 $ligneDB = $resultatDB->fetch();
 $passBD = $ligneDB[1];
 $IDuser = $ligneDB[2];
