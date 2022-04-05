@@ -19,23 +19,22 @@ $connexion->exec($reqSQL);
 <html lang="fr">
 
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="assets/css/css.css">
-    <script type="text/javascript" language="JavaScript" src="assets/js/js.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <?php
+    include("/includes/head.inc.php");
+    ?>
     <title>Se connecter - GSB</title>
 </head>
 
 <body>
     <header>
         <div class="center">
-            <img id="logo" src="assets/img/logo-gsb.png">
+            <img id="logo" src="/assets/img/logo-gsb.png">
         </div>
     </header>
     <form name="connexform" action="login.php" method="POST" onsubmit="verifSaisie()">
         <div id='login' class='center'>
             <div>
-                <img id='user' src='assets/img/user.png'>
+                <img id='user' src='/assets/img/user.png'>
             </div>
             <div>
                 <input type="text" id="userlog" name="userlog" required minlength="0" maxlength="20">
