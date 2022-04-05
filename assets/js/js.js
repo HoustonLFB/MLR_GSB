@@ -8,4 +8,5 @@ function verifSaisie()
         document.getElementById("userpass").focus;
 		return false;
     }
+    return true;
 }
