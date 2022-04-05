@@ -32,7 +32,7 @@ $connexion->exec($reqSQL);
             <img id="logo" src="/assets/img/logo-gsb.png">
         </div>
     </header>
-    <form name="connexform" action="login.php" method="POST" onsubmit="javascript: return verifSaisie()">
+    <form name="connexform" action="login.php" method="POST">
         <div id='login' class='center'>
             <div>
                 <img id='user' src='/assets/img/user.png'>
