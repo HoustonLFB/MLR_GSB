@@ -21,6 +21,7 @@ $connexion->exec($reqSQL);
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="assets/css/css.css">
+    <script type="text/javascript" language="JavaScript" src="assets/js/js.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Se connecter - GSB</title>
 </head>
@@ -31,7 +32,7 @@ $connexion->exec($reqSQL);
             <img id="logo" src="assets/img/logo-gsb.png">
         </div>
     </header>
-    <form name="connexform" action="login.php" method="POST">
+    <form name="connexform" action="login.php" method="POST" onsubmit="verifSaisie()">
         <div id='login' class='center'>
             <div>
                 <img id='user' src='assets/img/user.png'>
