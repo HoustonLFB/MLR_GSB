@@ -18,10 +18,10 @@ if ($_SESSION['logged'] && $_SESSION['NIVuser'] == 1) {
 
     </head>
     <body>
+        <div id="Accueil">
+            <h1>ACCUEIL</h1>
+        </div>
         <div class="Position">
-            <div id="Accueil">
-                <h1>ACCUEIL</h1>
-            </div>
             <div id="RapportdeVisite">
                 <h4>Rapport de Visite</h4>
             </div>

@@ -87,52 +87,39 @@ h4 {
 #Accueil{
     margin-top: 100px;
 }
+
+.Position{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+}
+
 #RapportdeVisite {
     border: 2px double #ffffff;
     border-radius: 20px;
-    margin-left: 200px;
-    margin-right: 1000px;
-    margin-top: 50px;
     background-color: #6490bb;
     padding: 25px 0px 25px 5px; 
-    grid-column: 1 / 2 ;
        
 }
 #ConsultationdesRapports {
     border: 2px double #ffffff;
     border-radius: 20px;
-    margin-left: 1000px;
-    margin-right: 100px;
-    margin-top: 50px;
     background-color: #6490bb;
     padding: 25px 5px 25px 5px;
-    grid-column: 1 / 2 ;
     
 }
 #Medicament {
     border: 2px double #ffffff;
     border-radius: 20px;
-    margin-left: 200px;
-    margin-right: 1000px;
-    margin-top: 50px;
     background-color: #6490bb;
     padding: 25px 5px 25px 5px;
-    grid-column: 1 / 3;
 }
 #Praticien {
     border: 2px double #ffffff;
     border-radius: 20px;
-    margin-left: 200px;
-    margin-right: 1000px;
-    margin-top: 50px;
     background-color: #6490bb;
     padding: 25px 5px 25px 5px;
-    grid-column: 1 / 3;
+
 }
 
-.Position{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 10px;
-    grid-auto-rows: minmax(100px, auto);
-}
