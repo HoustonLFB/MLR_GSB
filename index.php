@@ -1,11 +1,9 @@
 <?php
-//OUVERTURE SESSION
+//OUVERTURE SESSION 
 session_start();
 
 include('/includes/historique.inc.php');
 ?>
-
-
 
 <!DOCTYPE html>
 <html lang="fr">
