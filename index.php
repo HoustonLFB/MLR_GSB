@@ -2,15 +2,7 @@
 //OUVERTURE SESSION
 session_start();
 
-
-include('connexionBdd.php');
-
-$IP = $_SERVER['REMOTE_ADDR'];
-$url = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-
-$reqSQL = "INSERT INTO historique VALUES ('$IP', '$url')";
-
-$connexion->exec($reqSQL);
+include('/includes/historique.inc.php');
 ?>
 
 
