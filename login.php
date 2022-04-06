@@ -10,6 +10,7 @@ $reqSQLlogin = "SELECT * FROM compte WHERE user='$userid'";
 $resultatDB = $connexion->query($reqSQLlogin);
 
 if ($resultatDB !== 1) {
+if ($resultatDB -> rowcount() !== 1) {
     header("Location: /index.php/");
     exit();
 }
