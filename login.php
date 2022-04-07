@@ -13,7 +13,7 @@ $resultatDB = $connexion->query($reqSQLlogin);
 
 $qteRes = $resultatDB -> rowcount();
 
-$connexion = null;
+//$connexion = null;
 
 //S'IL N'Y A PAS UNE SEULE LIGNE CA RETOURNE SUR LA PAGE DE LOGIN
 //POUR PLUS TARD -----> METTRE MESSAGE D'ERREUR DANS FORM LOGIN INDEX
