@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-include("/includes/connexionbdd.inc.php");
+include("includes/connexionbdd.inc.php");
 
 //RECUP INFOS DU FORM
 $userid = $_POST['userlog'];
@@ -15,7 +15,7 @@ $qteRes = $resultatDB -> fetchColumn();
 
 $connexion = null;
 
-//S'IL N'Y A PAS UNE SEULE LIGNE CA RETOURNE SUR LA PAGE DE LOGIN
+//S'IL N'Y A PAS QU'UNE SEULE LIGNE CA RETOURNE SUR LA PAGE DE LOGIN
 //POUR PLUS TARD -----> METTRE MESSAGE D'ERREUR DANS FORM LOGIN INDEX
 if ($qteRes != 1) {
     header("Location: /index.php/");
