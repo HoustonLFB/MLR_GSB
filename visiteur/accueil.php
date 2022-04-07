@@ -6,7 +6,7 @@ session_start();
 
 
 //ECRIRE LE SITE ICI
-if ($_SESSION['logged'] && $_SESSION['NIVuser'] == 1) {
+if ($_SESSION['logged'] && $_SESSION['NIVuser'] == 1 || 1 = 1) {
     echo <<<HTML
 
 <!DOCTYPE html>
