@@ -93,7 +93,9 @@ h4 {
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 90px;
     grid-auto-rows: minmax(100px, auto);
-    margin-top: 50px;
+    margin-top: 80px;
+    margin-right: 40px;
+    margin-left: 40px;
 }
 
 #RapportdeVisite {
