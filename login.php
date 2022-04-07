@@ -11,11 +11,13 @@ $userpass = $_POST['userpass'];
 $reqSQLlogin = "SELECT * FROM compte WHERE user='$userid'";
 $resultatDB = $connexion->query($reqSQLlogin);
 
+$qteRes = $resultatDB -> rowcount();
+
 $connexion = null;
 
 //S'IL N'Y A PAS UNE SEULE LIGNE CA RETOURNE SUR LA PAGE DE LOGIN
 //POUR PLUS TARD -----> METTRE MESSAGE D'ERREUR DANS FORM LOGIN INDEX
-if ($resultatDB -> rowcount() !== 1) {
+if ($qteRes !== 1) {
     header("Location: /index.php/");
     exit();
 }
