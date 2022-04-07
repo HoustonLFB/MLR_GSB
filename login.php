@@ -17,7 +17,7 @@ $connexion = null;
 
 //S'IL N'Y A PAS QU'UNE SEULE LIGNE CA RETOURNE SUR LA PAGE DE LOGIN
 //POUR PLUS TARD -----> METTRE MESSAGE D'ERREUR DANS FORM LOGIN INDEX
-if ($qteRes != 1) {
+if ($qteRes != 0) {
     header("Location: /index.php/");
     exit();
 }
