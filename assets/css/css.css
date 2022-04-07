@@ -98,27 +98,27 @@ h4 {
 #RapportdeVisite {
     border: 2px double #ffffff;
     border-radius: 20px;
-    background-color:linear-gradient(#77aadd, #90e0e7);
+    background:linear-gradient(#77aadd, #90e0e7);
     padding: 25px 0px 25px 5px; 
        
 }
 #ConsultationdesRapports {
     border: 2px double #ffffff;
     border-radius: 20px;
-    background-color:linear-gradient(#77aadd, #90e0e7);
+    background:linear-gradient(#77aadd, #90e0e7);
     padding: 25px 5px 25px 5px;
     
 }
 #Medicament {
     border: 2px double #ffffff;
     border-radius: 20px;
-    background-color:linear-gradient(#77aadd, #90e0e7);
+    background:linear-gradient(#77aadd, #90e0e7);
     padding: 25px 5px 25px 5px;
 }
 #Praticien {
     border: 2px double #ffffff;
     border-radius: 20px;
-    background-color:linear-gradient(#77aadd, #90e0e7);
+    background:linear-gradient(#77aadd, #90e0e7);
     padding: 25px 5px 25px 5px;
 
 }
