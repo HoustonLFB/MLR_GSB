@@ -2,7 +2,6 @@
 //OUVERTURE SESSION 
 session_start();
 
-include('/includes/historique.inc.php');
 ?>
 
 <!DOCTYPE html>
@@ -14,7 +13,7 @@ include('/includes/historique.inc.php');
     <script type="text/javascript" language="JavaScript" src="assets/js/js.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="assets/img/favicon.ico"/>
-    <title>Se connecter - GSB</title>
+    <title>Oublie - GSB</title>
 </head>
 
 <body>
@@ -23,23 +22,18 @@ include('/includes/historique.inc.php');
             <img id="logo" src="assets/img/logo-gsb.png">
         </div>
     </header>
-    <form name="connexform" action="http://mlr-gsb.site/login.php" method="POST">
         <div id='login' class='center'>
             <div>
                 <img id='user' src='assets/img/user.png'>
             </div>
-            <div>
-                <input type="text" id="userlog" name="userlog" required minlength="0" maxlength="20">
+            <div id="numeroAssist">
+                <b>Numéro d'assistance :</b><br />
+                06.66.13.96.21
             </div>
-            <div>
-                <input type="password" id="userpass" name="userpass" required minlength="0" maxlength="20">
-            </div>
-            <div id="oublie">
-                <a href="oublie.php">Mot de passe oublié ?</a>
+            <div id="numeroAssist">
+                <a href="index.php">Retour</a>
             </div>
         </div>
-        <input type="submit" id='connexion' class='center' class="link" value="CONNEXION">
-    </form>
 </body>
 
 </html>
