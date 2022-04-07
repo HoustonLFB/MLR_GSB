@@ -11,15 +11,15 @@ $userpass = $_POST['userpass'];
 $reqSQLlogin = "SELECT * FROM compte WHERE user='$userid'";
 $resultatDB = $connexion->query($reqSQLlogin);
 
-$qteRes = $resultatDB -> rowcount();
+$qteRes = $resultatDB -> fetchColumn();
 
-//$connexion = null;
+$connexion = null;
 
 //S'IL N'Y A PAS UNE SEULE LIGNE CA RETOURNE SUR LA PAGE DE LOGIN
 //POUR PLUS TARD -----> METTRE MESSAGE D'ERREUR DANS FORM LOGIN INDEX
 if ($qteRes != 1) {
     header("Location: /index.php/");
-    //exit();
+    exit();
 }
 
 //MISE DU RESULTAT DANS VARIABLE
@@ -38,8 +38,8 @@ if ($ok) {
     $_SESSION['IDuser'] = $IDuser;
     $_SESSION['NIVuser'] = $NIVuser;
     header("Location: /redirection.php");
-    //exit();
+    exit();
 } else {
     header("Location: /index.php");
-    //exit();
+    exit();
 }
