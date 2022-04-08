@@ -85,7 +85,7 @@ $medicamentsAll = $resDBmedicament->fetchAll();
                 ?>
             </select><br>
 
-            Coefficient de confiance :
+            Coefficient de confiance : <br>
             1 <input type="radio" name="coefConf" id="coefConf" value=1 checked>
             2 <input type="radio" name="coefConf" id="coefConf" value=2>
             3 <input type="radio" name="coefConf" id="coefConf" value=3>
