@@ -9,7 +9,7 @@ $reqSQLpraticien = "SELECT praID, praNom, praPrenom FROM praticiens";
 $resDBpraticien = $connexion->query($reqSQLpraticien);
 
 $reqSQLmedicament = "SELECT medDepotLegal, medNomcommercial FROM medicaments";
-$resDBmedicament = $connexion->prepare($reqSQLmedicament);
+$resDBmedicament = $connexion->query($reqSQLmedicament);
 
 //RECUP ALL MEDOCS
 $medicamentsAll = $resDBmedicament->fetchAll();
