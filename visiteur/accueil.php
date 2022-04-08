@@ -24,7 +24,7 @@ if ($_SESSION['logged'] && $_SESSION['NIVuser'] == 1 || 1 == 1) {
         </div>
         <div class="Position">
             <div id="RapportdeVisite">
-                <h4>Rapport de Visite</h4>
+                <a href="rapportForm.php"><h4>Rapport de Visite</h4></a>
             </div>
             <div id="Medicament">
                 <h4>Médicament</h4>
