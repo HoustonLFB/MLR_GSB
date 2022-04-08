@@ -37,7 +37,7 @@ if ($ok) {
     $_SESSION['logged'] = True;
     $_SESSION['IDuser'] = $IDuser;
     $_SESSION['NIVuser'] = $NIVuser;
-    header("Location: /redirection.php");
+    header("Location: redirection.php");
     exit();
 } else {
     header("Location: /index.php");

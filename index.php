@@ -1,8 +1,6 @@
 <?php
 //OUVERTURE SESSION 
 session_start();
-
-include('/includes/historique.inc.php');
 ?>
 
 <!DOCTYPE html>
@@ -13,7 +11,7 @@ include('/includes/historique.inc.php');
     <link rel="stylesheet" type="text/css" href="assets/css/css.css">
     <script type="text/javascript" language="JavaScript" src="assets/js/js.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="assets/img/favicon.ico"/>
+    <link rel="icon" href="assets/img/favicon.ico" />
     <title>Se connecter - GSB</title>
 </head>
 
@@ -23,7 +21,7 @@ include('/includes/historique.inc.php');
             <img id="logo" src="assets/img/logo-gsb.png">
         </div>
     </header>
-    <form name="connexform" action="http://mlr-gsb.site/login.php" method="POST">
+    <form name="connexform" action="login.php" method="POST">
         <div id='login' class='center'>
             <div>
                 <img id='user' src='assets/img/user.png'>
