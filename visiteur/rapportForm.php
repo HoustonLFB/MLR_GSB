@@ -3,6 +3,7 @@ session_start();
 
 include("../includes/connexionbdd.inc.php");
 
+include("../includes/verifConnexVisit.inc.php");
 
 //REQUETE ET EXECUTION
 $reqSQLpraticien = "SELECT praID, praNom, praPrenom FROM praticiens";
