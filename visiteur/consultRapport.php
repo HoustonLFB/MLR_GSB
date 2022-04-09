@@ -54,26 +54,40 @@ $rapportAll = $resBDrapport->fetchAll();
                 <th>Date Visite</th>
                 <th>Bilan</th>
                 <th>Motif</th>
-                <th>Médication 1</th>
+                <th>Médicament 1</th>
                 <th>Médicament 2</th>
                 <th>Coefficient</th>
             </tr>
         </thead>
         <?php
         foreach ($rapportAll as $occurence) {
+            //MISE EN FORME DE LA DATE
             $dateRapport = date_format(new DateTime($occurence[3]), 'Y/m/d');
             $dateVisite = date_format(new DateTime($occurence[4]), 'Y/m/d');
+
+            //RECUP NOM VISITEURS
+            $visMatricule = $occurence[1];
+            $reqSQLvisiteur = "SELECT * FROM visiteurs WHERE visMatricule ='$visMatricule'";
+            $resBDvisiteur = $connexion->query($reqSQLvisiteur);
+            $visiteur = $resBDvisiteur->fetch();
+
+            //RECUP NOM PRATICIENS
+            $praID = $occurence[2];
+            $reqSQLpraticien = "SELECT * FROM praticiens WHERE praID ='$praID'";
+            $resBDpraticien = $connexion->query($reqSQLpraticien);
+            $praticien = $resBDpraticien->fetch();
+
             echo "
                 <tr>
-                    <td>$occurence[1]</td>
-                    <td>$occurence[2]</td>
+                    <td>$visiteur[1] $visiteur[2]</td>
+                    <td>$praticien[1] $praticien[2]</td>
                     <td>$dateRapport</td>
                     <td>$dateVisite</td>
                     <td>$occurence[5]</td>
                     <td>$occurence[6]</td>
                     <td>$occurence[7]</td>
                     <td>$occurence[8]</td>
-                    <td>$occurence[9]</td>
+                    <td>$occurence[9]/5</td>
                 </tr>
             ";
         }
