@@ -77,6 +77,7 @@ $rapportAll = $resBDrapport->fetchAll();
             $resBDpraticien = $connexion->query($reqSQLpraticien);
             $praticien = $resBDpraticien->fetch();
 
+            //AFFICHAGE 
             echo "
                 <tr>
                     <td>$visiteur[1] $visiteur[2]</td>
