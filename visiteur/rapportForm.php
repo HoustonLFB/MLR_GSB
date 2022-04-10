@@ -99,6 +99,26 @@ $medicamentsAll = $resDBmedicament->fetchAll();
             <input type="submit" />
 
         </form>
+        <?php
+        if (isset($_SESSION['erreurDateMsg'])) {
+            echo '<script type="text/javascript">alertMauvaiseDate();</script>';
+            echo "
+                <div style='color: red;'>
+                La date de visite ne peut pas être ultérieur à la date de saisie.
+                </div>
+            ";
+            unset($_SESSION['erreurDateMsg']);
+        }
+        if (isset($_SESSION['erreurDoubleProd'])) {
+            echo '<script type="text/javascript">alertDoubleProd();</script>';
+            echo "
+                <div style='color: red;'>
+                Les deux médicaments ne peuvent pas être les mêmes.
+                </div>
+            ";
+            unset($_SESSION['erreurDoubleProd']);
+        }
+        ?>
     </div>
 </body>
 
