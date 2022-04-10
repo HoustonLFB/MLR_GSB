@@ -40,6 +40,7 @@ if ($ok) {
     header("Location: redirection.php");
     exit();
 } else {
-    header("Location: /index.php");
+    $_SESSION['erreurLogMsg'] = True;
+    header("Location: index.php");
     exit();
 }

@@ -29,6 +29,17 @@ include("includes/historique.inc.php");
             <div>
                 <img id='user' src='assets/img/user.png'>
             </div>
+            <?php
+            if (isset($_SESSION['erreurLogMsg'])) {
+                echo "
+                <div style='color: red;'>
+                    Erreur de connexion. <br>
+                    L'identifiant ou le mot de passe est incorrect.
+                </div>
+                ";
+                unset($_SESSION['erreurLogMsg']);
+            }
+            ?>
             <div>
                 <input type="text" id="userlog" name="userlog" required minlength="0" maxlength="20">
             </div>
