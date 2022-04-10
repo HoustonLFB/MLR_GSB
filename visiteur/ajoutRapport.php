@@ -29,6 +29,6 @@ if ($medoc1 == $medoc2) {
 //CREATION de la requete
 $reqSQLinto = "INSERT INTO rapportVisite VALUES (NULL, '$IDuser', $praID, now(), '$dateVisite', '$rapBilan', '$rapMotif', '$medoc1', '$medoc2', $coefConf);";
 
-//$connexion->exec($reqSQLinto);
+$connexion->exec($reqSQLinto);
 
 header('Location: rapportForm.php');
