@@ -117,13 +117,13 @@ a{
     padding: 25px 5px 25px 5px;
     
 }
-#Medicament {
+#Medicaments {
     border: 2px double #ffffff;
     border-radius: 20px;
     background:linear-gradient(#77aadd, #90e0e7);
     padding: 25px 5px 25px 5px;
 }
-#Praticien {
+#Praticiens {
     border: 2px double #ffffff;
     border-radius: 20px;
     background:linear-gradient(#77aadd, #90e0e7);
