@@ -2,8 +2,9 @@
 //OUVERTURE SESSION 
 session_start();
 
-include("includes/connexionbdd.inc.php");
 include("includes/historique.inc.php");
+include("includes/connexionbdd.inc.php");
+
 ?>
 
 <!DOCTYPE html>
