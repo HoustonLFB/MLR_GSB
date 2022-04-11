@@ -61,8 +61,8 @@ $rapportAll = $resBDrapport->fetchAll();
         <?php
         foreach ($rapportAll as $occurence) {
             //MISE EN FORME DE LA DATE
-            $dateRapport = date_format(new DateTime($occurence[3]), 'Y/m/d');
-            $dateVisite = date_format(new DateTime($occurence[4]), 'Y/m/d');
+            $dateRapport = date_format(new DateTime($occurence[3]), 'd/m/Y');
+            $dateVisite = date_format(new DateTime($occurence[4]), 'd/m/Y');
 
             //RECUP NOM VISITEURS
             $visMatricule = $occurence[1];
