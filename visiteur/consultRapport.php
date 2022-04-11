@@ -23,7 +23,7 @@ $rapportAll = $resBDrapport->fetchAll();
     <link rel="icon" href="http://mlr-gsb.site/assets/img/favicon.ico" />
 
     <style>
-        #tableConsult {
+        #tableConsultRap {
             border: 1px solid #333;
             text-align: center;
             margin-top: 2%;
@@ -35,14 +35,13 @@ $rapportAll = $resBDrapport->fetchAll();
 </head>
 
 <body>
-
     <header>
         <div class="center">
             <img id="logo" src="../assets/img/logo-gsb.png">
         </div>
     </header>
 
-    <table id="tableConsult">
+    <table id="tableConsultRap">
         <thead>
             <tr>
                 <th colspan="9">Consultation des Rapports de Visites</th>
