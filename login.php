@@ -13,7 +13,7 @@ $resultatDB = $connexion->query($reqSQLlogin);
 
 //$qteRes = $resultatDB -> rowCount();
 
-$connexion = null;
+
 
 //S'IL N'Y A PAS QU'UNE SEULE LIGNE CA RETOURNE SUR LA PAGE DE LOGIN
 //POUR PLUS TARD -----> METTRE MESSAGE D'ERREUR DANS FORM LOGIN INDEX
@@ -37,10 +37,21 @@ if ($ok) {
     $_SESSION['logged'] = True;
     $_SESSION['IDuser'] = $IDuser;
     $_SESSION['NIVuser'] = $NIVuser;
+
+    $IP = $_SERVER['REMOTE_ADDR'];
+    $reqSQLhistoLog = "INSERT INTO historiqueConnex VALUES ('$IP', '$userid',1, now())";
+    $connexion->exec($reqSQLhistoLog);
+
     header("Location: redirection.php");
     exit();
 } else {
     $_SESSION['erreurLogMsg'] = True;
+
+    $IP = $_SERVER['REMOTE_ADDR'];
+    $reqSQLhistoLog = "INSERT INTO historiqueConnex VALUES ('$IP', '$userid',0,now())";
+    $connexion->exec($reqSQLhistoLog);
+
+    echo $reqSQLhistoLog;
     header("Location: index.php");
     exit();
 }
