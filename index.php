@@ -41,10 +41,10 @@ include("includes/historique.inc.php");
             }
             ?>
             <div>
-                <input type="text" id="userlog" name="userlog" required minlength="0" maxlength="20">
+                <input type="text" id="userlog" name="userlog" required minlength="0" maxlength="20" placeholder="Identifiant">
             </div>
             <div>
-                <input type="password" id="userpass" name="userpass" required minlength="0" maxlength="20">
+                <input type="password" id="userpass" name="userpass" required minlength="0" maxlength="20" placeholder="Mot de Passe">
             </div>
             <div id="oublie">
                 <a href="oublie.php">Mot de passe oublié ?</a>
