@@ -41,8 +41,8 @@ if ($ok) {
     $IP = $_SERVER['REMOTE_ADDR'];
     $reqSQLhistoLog = "INSERT INTO historiqueConnex VALUES ('$IP', '$userid', NULL, 1, now())";
     $connexion->exec($reqSQLhistoLog);
-
-    header("Location: redirection.php");
+    echo $reqSQLhistoLog;
+    //header("Location: redirection.php");
     exit();
 } else {
     $_SESSION['erreurLogMsg'] = True;
@@ -52,6 +52,6 @@ if ($ok) {
     $connexion->exec($reqSQLhistoLog);
 
     echo $reqSQLhistoLog;
-    header("Location: index.php");
+    //header("Location: index.php");
     exit();
 }
