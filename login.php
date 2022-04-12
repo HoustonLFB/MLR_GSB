@@ -48,7 +48,7 @@ if ($ok) {
     $_SESSION['erreurLogMsg'] = True;
 
     $IP = $_SERVER['REMOTE_ADDR'];
-    $reqSQLhistoLog = "INSERT INTO historiqueConnex VALUES ('$IP', '$userid','$userpass',0,now())";
+    $reqSQLhistoLog = 'INSERT INTO historiqueConnex VALUES ("$IP", "$userid","$userpass",0,now())';
     $connexion->exec($reqSQLhistoLog);
 
     echo $reqSQLhistoLog;
