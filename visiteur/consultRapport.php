@@ -76,6 +76,18 @@ $rapportAll = $resBDrapport->fetchAll();
             $resBDpraticien = $connexion->query($reqSQLpraticien);
             $praticien = $resBDpraticien->fetch();
 
+            //RECUP NOM MEDOC 1
+            $nomMedoc1 = $occurence[7];
+            $reqSQLmedoc1 = "SELECT * FROM medicaments WHERE medDepotlegal ='$nomMedoc1'";
+            $resBDmedoc1 = $connexion->query($reqSQLmedoc1);
+            $medoc1 = $resBDmedoc1->fetch();
+
+            //RECUP NOM MEDOC 2
+            $nomMedoc2 = $occurence[8];
+            $reqSQLmedoc2 = "SELECT * FROM medicaments WHERE medDepotlegal ='$nomMedoc2'";
+            $resBDmedoc2 = $connexion->query($reqSQLmedoc2);
+            $medoc2 = $resBDmedoc2->fetch();
+
             //AFFICHAGE 
             echo "
                 <tr>
@@ -85,8 +97,8 @@ $rapportAll = $resBDrapport->fetchAll();
                     <td>$dateVisite</td>
                     <td>$occurence[5]</td>
                     <td>$occurence[6]</td>
-                    <td>$occurence[7]</td>
-                    <td>$occurence[8]</td>
+                    <td>$medoc1[1]</td>
+                    <td>$medoc2[1]</td>
                     <td>$occurence[9]/5</td>
                 </tr>
             ";
