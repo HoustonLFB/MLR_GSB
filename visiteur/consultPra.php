@@ -3,7 +3,7 @@ session_start();
 
 include("../includes/connexionbdd.inc.php");
 include("../includes/historique.inc.php");
-//include("../includes/verifConnexVisit.inc.php");
+include("../includes/verifConnexVisit.inc.php");
 
 $reqSQLconsultPra = "SELECT * FROM praticiens";
 $resBDpra = $connexion->query($reqSQLconsultPra);
