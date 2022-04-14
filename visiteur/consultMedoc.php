@@ -17,22 +17,11 @@ $medocAll = $resBDmedoc->fetchAll();
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="http://mlr-gsb.site/assets/css/css.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/css.css">
     <script type="text/javascript" language="JavaScript" src="http://mlr-gsb.site/assets/js/js.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="http://mlr-gsb.site/assets/img/favicon.ico" />
     <title>Consultation Médicaments - GSB</title>
-
-    <style>
-        #tableConsultMedoc {
-            border: 1px solid #333;
-            text-align: center;
-            margin-top: 2%;
-            margin-left: auto;
-            margin-right: auto;
-        }
-    </style>
-
 </head>
 
 <body>
@@ -48,8 +37,8 @@ $medocAll = $resBDmedoc->fetchAll();
                 <th colspan="2">Consultation des Médicaments</th>
             </tr>
             <tr>
-                <th>Deport Légal</th>
-                <th>Nom</th>
+                <th width="200px" class='BborderR'>Deport Légal</th>
+                <th width="200px" class='BborderL'>Nom</th>
             </tr>
         </thead>
 
@@ -60,8 +49,8 @@ $medocAll = $resBDmedoc->fetchAll();
 
             echo "
                 <tr>
-                    <td>$codeMed</td>
-                    <td>$nomMed</td>
+                    <td class='borderR'>$codeMed</td>
+                    <td class='borderL'>$nomMed</td>
                 </tr>
             ";
         }

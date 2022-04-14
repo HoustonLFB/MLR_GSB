@@ -17,22 +17,11 @@ $praAll = $resBDpra->fetchAll();
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="http://mlr-gsb.site/assets/css/css.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/css.css">
     <script type="text/javascript" language="JavaScript" src="http://mlr-gsb.site/assets/js/js.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="http://mlr-gsb.site/assets/img/favicon.ico" />
     <title>Consultation Praticiens - GSB</title>
-
-    <style>
-        #tableConsultMedoc {
-            border: 1px solid #333;
-            text-align: center;
-            margin-top: 2%;
-            margin-left: auto;
-            margin-right: auto;
-        }
-    </style>
-
 </head>
 
 <body>
@@ -42,15 +31,15 @@ $praAll = $resBDpra->fetchAll();
         </div>
     </header>
 
-    <table id="tableConsultMedoc">
+    <table id="tableConsultPra">
         <thead>
             <tr>
                 <th colspan="2">Consultation des Praticiens</th>
             </tr>
             <tr>
-                <th>ID</th>
-                <th>Nom</th>
-            </tr>
+                <th width="100px" class='BborderR'>ID</th>
+                <th width="400px" class='BborderL'>Nom</th>
+            </tr >
         </thead>
 
         <?php
@@ -59,10 +48,12 @@ $praAll = $resBDpra->fetchAll();
             $praNom = $occurence[1];
             $praPrenom = $occurence[2];
 
+            
+
             echo "
                 <tr>
-                    <td>$praID</td>
-                    <td>$praNom $praPrenom</td>
+                    <td class='borderR'>$praID</td>
+                    <td class='borderL'>$praNom $praPrenom</td>
                 </tr>
             ";
         }

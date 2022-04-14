@@ -17,21 +17,11 @@ $rapportAll = $resBDrapport->fetchAll();
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="http://mlr-gsb.site/assets/css/css.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/css.css">
     <script type="text/javascript" language="JavaScript" src="http://mlr-gsb.site/assets/js/js.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="http://mlr-gsb.site/assets/img/favicon.ico" />
     <title>Consultation Rapports - GSB</title>
-
-    <style>
-        #tableConsultRap {
-            border: 1px solid #333;
-            text-align: center;
-            margin-top: 2%;
-            margin-left: auto;
-            margin-right: auto;
-        }
-    </style>
 
 </head>
 
@@ -48,15 +38,15 @@ $rapportAll = $resBDrapport->fetchAll();
                 <th colspan="9">Consultation des Rapports de Visites</th>
             </tr>
             <tr>
-                <th>Visiteur</th>
-                <th>Praticien</th>
-                <th>Date Rapport</th>
-                <th>Date Visite</th>
-                <th>Bilan</th>
-                <th>Motif</th>
-                <th>Médicament 1</th>
-                <th>Médicament 2</th>
-                <th>Coefficient</th>
+                <th width="150px" class='BborderR'>Visiteur</th>
+                <th width="150px" class='BborderM'>Praticien</th>
+                <th width="150px" class='BborderM'>Date Rapport</th>
+                <th width="150px" class='BborderM'>Date Visite</th>
+                <th width="150px" class='BborderM'>Bilan</th>
+                <th width="150px" class='BborderM'>Motif</th>
+                <th width="150px" class='BborderM'>Médicament 1</th>
+                <th width="150px" class='BborderM'>Médicament 2</th>
+                <th width="150px" class='BborderL'>Coefficient</th>
             </tr>
         </thead>
         <?php
@@ -92,15 +82,15 @@ $rapportAll = $resBDrapport->fetchAll();
             //AFFICHAGE 
             echo "
                 <tr>
-                    <td>$visiteur[1] $visiteur[2]</td>
-                    <td>$praticien[1] $praticien[2]</td>
-                    <td>$dateRapport</td>
-                    <td>$dateVisite</td>
-                    <td>$occurence[5]</td>
-                    <td>$occurence[6]</td>
-                    <td>$medoc1[1]</td>
-                    <td>$medoc2[1]</td>
-                    <td>$occurence[9]/5</td>
+                    <td class='borderR'>$visiteur[1] $visiteur[2]</td>
+                    <td class='borderM'>$praticien[1] $praticien[2]</td>
+                    <td class='borderM'>$dateRapport</td>
+                    <td class='borderM'>$dateVisite</td>
+                    <td class='borderM'>$occurence[5]</td>
+                    <td class='borderM'>$occurence[6]</td>
+                    <td class='borderM'>$medoc1[1]</td>
+                    <td class='borderM'>$medoc2[1]</td>
+                    <td class='borderL'>$occurence[9]/5</td>
                 </tr>
             ";
         }
