@@ -59,7 +59,7 @@ $medicamentsAll = $resDBmedicament->fetchAll();
                 ?>
             </select><br>
 
-            Remplaçant <input type="checkbox" name="remplaDemande" id="remplaDemande" class="remplaON"><br>
+            Remplaçant <input type="checkbox" name="remplaDemande" id="remplaDemande"><br>
 
             Quand visite ? <input type="date" name="dateVisite" id="dateVisite" required><br>
 

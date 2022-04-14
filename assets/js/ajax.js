@@ -1,23 +1,13 @@
-// $(document).ready(function(){
-//     $("#remplaDemande").change(function(){
-//         $("#remplaDemande").after("<input type='text' name='remplaNom' id='remplaNom'></input><br>");
-//         $("#remplaDemande").remove();
-//         $("#remplaNom").before("<input type='checkbox' name='remplaDemandeOff' id='remplaDemandeOff'>");
-//     });
-//     $("#remplaDemandeOff").change(function(){
-//         $("#remplaNom").remove();
-//     });
-// });
-
+//QUAND CHANGE CLICK SUR REMPLACANT
 $(document).ready(function(){
-    $('.remplaON').on('click', function(){
-        //ON
-        $("#remplaDemande").after("<input type='text' name='remplaNom' id='remplaNom'><br>");
-        $("#remplaDemande").removeClass("remplaON");
-        $("#remplaDemande").addClass("remplaOff");
+    $('#remplaDemande').on('click', function(){
+        //SI CHECKED OR NON
+       if (document.getElementById("remplaDemande").checked == true) {
+        $("#remplaDemande").after("<input type='text' name='remplaNom' id='remplaNom'>");
+       }
+       else {
+        $("#remplaNom").remove();  
+       }
     })
-    $('.remplaOff').on('click', function(){
-        //OFF
-        $("#remplaNom").remove();
-    });
+        
 });
