@@ -42,58 +42,74 @@ $medicamentsAll = $resDBmedicament->fetchAll();
 
     <div name="formRapport" id="formRapport">
         <form action="ajoutRapport.php" method="POST">
+            <div id='bouducon'>
+                Quel Praticien : <select name="praticienChoix" id="scrollbarPra">
+                    <?php
+                    foreach ($resDBpraticien as $occurencePra) {
+                        echo "<option value='" . $occurencePra['praID'] . "''>" . $occurencePra['praNom'] . " " . $occurencePra['praPrenom'] . "</option>";
+                    }
+                    ?>
+                </select><br>
+            </div>
+                
+            <div id='bouducon'>
+                Remplaçant <input type="checkbox" name="remplaDemande" id="remplaDemande" class="remplaON"><br>
+            </div>
 
-            Quel Praticien : <select name="praticienChoix" id="praticienChoix">
-                <?php
-                foreach ($resDBpraticien as $occurencePra) {
-                    echo "<option value='" . $occurencePra['praID'] . "''>" . $occurencePra['praNom'] . " " . $occurencePra['praPrenom'] . "</option>";
-                }
-                ?>
-            </select><br>
+            <div id='bouducon'>
+                Quand visite ? <input type="date" name="dateVisite" id="dateVisite" required><br>
+            </div>
 
-            Remplaçant <input type="checkbox" name="remplaDemande" id="remplaDemande" class="remplaON"><br>
+            <div id='bouducon'>
+                Motif de visite :
+                <select name="motif" id="motif" required>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select> <br>
+            </div>
 
-            Quand visite ? <input type="date" name="dateVisite" id="dateVisite" required><br>
+            <div id='bouducon'>
+                Medicament 1 : <select name="medoc1" id="medoc1" required>
+                    <?php
+                    foreach ($medicamentsAll as $occurenceMedoc) {
+                        $IDmedoc = $occurenceMedoc[0];
+                        $libMedoc = $occurenceMedoc[1];
+                        echo "<option value='$IDmedoc'>$libMedoc</option>";
+                    }
+                    ?>
+                </select>
+            </div>
 
-            Motif de visite :
-            <select name="motif" id="motif" required>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-            </select> <br>
+            <div id='bouducon'>
+                Medicament 2 : <select name="medoc2" id="medoc2">
+                    <?php
+                    foreach ($medicamentsAll as $occurenceMedoc) {
+                        $IDmedoc = $occurenceMedoc[0];
+                        $libMedoc = $occurenceMedoc[1];
+                        echo "<option value='$IDmedoc'>$libMedoc</option>";
+                    }
+                    ?>
+                </select><br>
+            </div>
 
-            Medicament 1 : <select name="medoc1" id="medoc1" required>
-                <?php
-                foreach ($medicamentsAll as $occurenceMedoc) {
-                    $IDmedoc = $occurenceMedoc[0];
-                    $libMedoc = $occurenceMedoc[1];
-                    echo "<option value='$IDmedoc'>$libMedoc</option>";
-                }
-                ?>
-            </select>
+            <div id='bouducon'>
+                Coefficient de confiance : <br>
+                1 <input type="radio" name="coefConf" id="coefConf" value=1 checked>
+                2 <input type="radio" name="coefConf" id="coefConf" value=2>
+                3 <input type="radio" name="coefConf" id="coefConf" value=3>
+                4 <input type="radio" name="coefConf" id="coefConf" value=4>
+                5 <input type="radio" name="coefConf" id="coefConf" value=5>
+                <br>
+            </div>
 
-            Medicament 2 : <select name="medoc2" id="medoc2">
-                <?php
-                foreach ($medicamentsAll as $occurenceMedoc) {
-                    $IDmedoc = $occurenceMedoc[0];
-                    $libMedoc = $occurenceMedoc[1];
-                    echo "<option value='$IDmedoc'>$libMedoc</option>";
-                }
-                ?>
-            </select><br>
 
-            Coefficient de confiance : <br>
-            1 <input type="radio" name="coefConf" id="coefConf" value=1 checked>
-            2 <input type="radio" name="coefConf" id="coefConf" value=2>
-            3 <input type="radio" name="coefConf" id="coefConf" value=3>
-            4 <input type="radio" name="coefConf" id="coefConf" value=4>
-            5 <input type="radio" name="coefConf" id="coefConf" value=5>
+            <div id='bouducon'>
+                Bilan du rapport : <br>
+                <textarea name="rapBilan" id="rapBilan"></textarea><br>
+            </div>
 
-            <br>
-            Bilan du rapport : <br>
-            <textarea name="rapBilan" id="rapBilan"></textarea><br>
-            <input type="submit" />
-
+                <input type="submit" />
         </form>
         <?php
         if (isset($_SESSION['erreurDateMsg'])) {

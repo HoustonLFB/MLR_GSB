@@ -9,8 +9,9 @@
 body::-webkit-scrollbar {
     display: none;
 }
+/* Suppression de la scroll bar */
 * {
-    scrollbar-width: none; /* Firefox implementation */
+    scrollbar-width: none;
 }
 /*
 **************************************************************************************************
@@ -134,8 +135,8 @@ a{
     border-radius: 20px;
     background:linear-gradient(#77aadd, #90e0e7);
     padding: 25px 5px 25px 5px;
-
-}/*
+}
+/*
 **************************************************************************************************
 *      RapportVisite     *************************************************************************
 **************************************************************************************************
@@ -145,6 +146,13 @@ a{
     margin: auto;
     margin-top: 1%;
     text-align: center;
+}
+#bouducon {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#scrollbarPra{
+    scrollbar-width: thin;
 }
 /*
 **************************************************************************************************
