@@ -11,7 +11,12 @@ $rapBilan = $_POST['rapBilan'];
 $rapMotif = $_POST['motif'];
 $medoc1 = $_POST['medoc1'];
 $medoc2 = $_POST['medoc2'];
-$coefConf = $_POST['coefConf'];
+$coefConf = $_POST['rangeCoef'];
+
+//VERIF SI REMPLACANT
+if (!empty($_POST['remplaNom'])) {
+    $remplaNom = $_POST['remplaNom'];
+}
 
 //VERIF VALIDITE date
 if ($dateVisite > (date('Y-m-c H:i:s'))) {
@@ -27,7 +32,13 @@ if ($medoc1 == $medoc2) {
 }
 
 //CREATION de la requete
-$reqSQLinto = "INSERT INTO rapportVisite VALUES (NULL, '$IDuser', $praID, now(), '$dateVisite', '$rapBilan', '$rapMotif', '$medoc1', '$medoc2', $coefConf);";
+
+//SI PAS DE REMPLACANT
+if (empty($remplaNom)) {
+    $reqSQLinto = "INSERT INTO rapportVisite VALUES (NULL, '$IDuser', $praID, NULL, now(), '$dateVisite', '$rapBilan', '$rapMotif', '$medoc1', '$medoc2', $coefConf);";
+} else { // si ya remplacant
+    $reqSQLinto = "INSERT INTO rapportVisite VALUES (NULL, '$IDuser', $praID, '$remplaNom', now(), '$dateVisite', '$rapBilan', '$rapMotif', '$medoc1', '$medoc2', $coefConf);";
+}
 
 $connexion->exec($reqSQLinto);
 
