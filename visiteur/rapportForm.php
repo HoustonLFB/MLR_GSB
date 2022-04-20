@@ -23,7 +23,7 @@ $medicamentsAll = $resDBmedicament->fetchAll();
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="http://mlr-gsb.site/assets/css/css.css">
-    <script type="text/javascript" language="JavaScript" src="http://mlr-gsb.site/assets/js/js.js"></script>
+    <script type="text/javascript" language="JavaScript" src="../assets/js/js.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="http://mlr-gsb.site/assets/img/favicon.ico" />
     <script src="../assets/js/jquery.js"></script>
@@ -42,7 +42,7 @@ $medicamentsAll = $resDBmedicament->fetchAll();
 
     <div name="formRapport" id="formRapport">
         <form action="ajoutRapport.php" method="POST">
-            <div id='bouducon'>
+            <div class='bouducon'>
                 Quel Praticien : <select name="praticienChoix" id="scrollbarPra">
                     <?php
                     foreach ($resDBpraticien as $occurencePra) {
@@ -51,16 +51,16 @@ $medicamentsAll = $resDBmedicament->fetchAll();
                     ?>
                 </select><br>
             </div>
-                
-            <div id='bouducon'>
+
+            <div class='bouducon'>
                 Remplaçant <input type="checkbox" name="remplaDemande" id="remplaDemande" class="remplaON"><br>
             </div>
 
-            <div id='bouducon'>
+            <div class='bouducon'>
                 Quand visite ? <input type="date" name="dateVisite" id="dateVisite" required><br>
             </div>
 
-            <div id='bouducon'>
+            <div class='bouducon'>
                 Motif de visite :
                 <select name="motif" id="motif" required>
                     <option value="1">1</option>
@@ -69,7 +69,7 @@ $medicamentsAll = $resDBmedicament->fetchAll();
                 </select> <br>
             </div>
 
-            <div id='bouducon'>
+            <div class='bouducon'>
                 Medicament 1 : <select name="medoc1" id="medoc1" required>
                     <?php
                     foreach ($medicamentsAll as $occurenceMedoc) {
@@ -81,7 +81,7 @@ $medicamentsAll = $resDBmedicament->fetchAll();
                 </select>
             </div>
 
-            <div id='bouducon'>
+            <div class='bouducon'>
                 Medicament 2 : <select name="medoc2" id="medoc2">
                     <?php
                     foreach ($medicamentsAll as $occurenceMedoc) {
@@ -93,23 +93,19 @@ $medicamentsAll = $resDBmedicament->fetchAll();
                 </select><br>
             </div>
 
-            <div id='bouducon'>
+            <div class='bouducon'>
                 Coefficient de confiance : <br>
-                1 <input type="radio" name="coefConf" id="coefConf" value=1 checked>
-                2 <input type="radio" name="coefConf" id="coefConf" value=2>
-                3 <input type="radio" name="coefConf" id="coefConf" value=3>
-                4 <input type="radio" name="coefConf" id="coefConf" value=4>
-                5 <input type="radio" name="coefConf" id="coefConf" value=5>
-                <br>
+                <input name="rangeCoef" id="rangeCoef" type="range" style="width: 200px; height: 40px" min="1" max="5" value="1" step="1" list="increments" oninput="showMainTstatValue(this.value)" onchange="showMainTstatValue(this.value)">
+                <span id="rangeShow">1</span> <br>
             </div>
 
 
-            <div id='bouducon'>
+            <div class='bouducon'>
                 Bilan du rapport : <br>
                 <textarea name="rapBilan" id="rapBilan"></textarea><br>
             </div>
 
-                <input type="submit" />
+            <input type="submit" />
         </form>
         <?php
         if (isset($_SESSION['erreurDateMsg'])) {
