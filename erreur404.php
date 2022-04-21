@@ -18,7 +18,7 @@ include("includes/historique.inc.php");
     <script type="text/javascript" language="JavaScript" src="assets/js/js.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="assets/img/favicon.ico" />
-    <title>Erreur 404</title>
+    <title>Erreur 404 - GSB</title>
 </head>
 
 <body>
