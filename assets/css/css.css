@@ -230,3 +230,31 @@ border-right: 1px solid #333;
 border-left: 1px solid #333;
 border-bottom: 1px solid rgba(51, 51, 51, .2);
 }
+/*
+**************************************************************************************************
+*      Erreur404        **************************************************************************
+**************************************************************************************************
+*/
+#image {
+    margin-top: 150px;
+    width: 45%;
+}  
+#Texte {
+    margin-top: 30px;
+    text-align: center;
+}
+#retour {
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    border-radius: 10px 10px 10px 10px;
+    padding: 10px 10px 10px 10px;
+    background-color: #77aadd;
+    display: flex;
+}
+#retour:hover {
+    background-color: #6490bb;
+    color: #daf9fc;
+    text-decoration: none;
+}
