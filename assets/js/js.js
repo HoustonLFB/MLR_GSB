@@ -12,3 +12,17 @@ function showMainTstatValue(newValue)
 {
  	document.getElementById("rangeShow").innerHTML = newValue;
 }
+
+// AFFICHAGE REMPLACANT BOX
+$(document).ready(function(){
+    $('.remplaON').on('click', function(){
+        //ON
+        $("#remplaDemande").after("<input type='text' name='remplaNom' id='remplaNom'><br>");
+        $("#remplaDemande").removeClass("remplaON");
+        $("#remplaDemande").addClass("remplaOff");
+    })
+    $('.remplaOff').on('click', function(){
+        //OFF
+        $("#remplaNom").remove();
+    });
+});
