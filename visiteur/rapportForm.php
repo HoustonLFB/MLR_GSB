@@ -27,7 +27,6 @@ $medicamentsAll = $resDBmedicament->fetchAll();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../assets/img/favicon.ico" />
     <script src="../assets/js/jquery.js"></script>
-    <script src="../assets/js/ajax.js"></script>
 
     <title>Formulaire rapport - GSB</title>
 
