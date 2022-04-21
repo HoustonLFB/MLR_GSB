@@ -1,17 +1,17 @@
 /* Police d'écriture du site et Couleur de base du texte remise a 0 de toutes les marges  */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
-*{
-    font-family: 'Montserrat', Georgia, 'Times New Roman', Times, serif;
-    margin: 0px;
-    color:#242323;
-    text-decoration: none;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+* {
+  font-family: "Montserrat", Georgia, "Times New Roman", Times, serif;
+  margin: 0px;
+  color: #242323;
+  text-decoration: none;
 }
 body::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 /* Suppression de la scroll bar */
 * {
-    scrollbar-width: none;
+  scrollbar-width: none;
 }
 /*
 **************************************************************************************************
@@ -19,214 +19,268 @@ body::-webkit-scrollbar {
 **************************************************************************************************
 */
 /* Couleur de fond */
-body{
-    background-color: #daf9fc;
+body {
+  background-color: #daf9fc;
 }
 /* Alignement de centrale du texte */
-.center{
-    text-align: center;
+.center {
+  text-align: center;
 }
 h1 {
-    text-align: center
-    
+  text-align: center;
 }
 h4 {
-    color : #000000 ;
-    text-align: center;  
-    font-size: 30px;
+  color: #000000;
+  text-align: center;
+  font-size: 30px;
 }
-a{
-    color: #0608af;
+a {
+  color: #0608af;
 }
 /*
 **************************************************************************************************
 *      Login     *********************************************************************************
 **************************************************************************************************
 */
-#logo{
-    margin-top: 20px;
-    width: 15%;
+#logo {
+  margin-top: 20px;
+  width: 15%;
 }
-#login{
-    margin-top: 100px;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 20px;
-    width: 350px;
-    height: 350px;
-    background:linear-gradient(#77aadd, #90e0e7);
+#login {
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 20px;
+  width: 350px;
+  height: 350px;
+  background: linear-gradient(#77aadd, #90e0e7);
 }
-#user{
-    width: 30%;
-    margin-top: -15%;
+#user {
+  width: 30%;
+  margin-top: -15%;
 }
-#userlog{
-    margin-top: 50px;
+#userlog {
+  margin-top: 50px;
 }
-#motdepasse{
-    margin-top: 50px;
+#motdepasse {
+  margin-top: 50px;
 }
-#oublie{
-    margin-top: 50px;
+#oublie {
+  margin-top: 50px;
 }
-#connexion{
-    margin-top: 0px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 200px;
-    border-radius: 0px 0px 10px 10px;
-    padding: 10px 10px 10px 10px;
-    background-color: #77aadd;
-    display: flex;
+#connexion {
+  margin-top: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+  border-radius: 0px 0px 10px 10px;
+  padding: 10px 10px 10px 10px;
+  background-color: #77aadd;
+  display: flex;
 }
 #connexion:hover {
-    background-color: #6490bb;
-    color: #daf9fc;
-    text-decoration: none;
+  background-color: #6490bb;
+  color: #daf9fc;
+  text-decoration: none;
 }
 #connexion:active {
-    background-color: #54789c;
-    text-decoration: none;
+  background-color: #54789c;
+  text-decoration: none;
 }
-#numeroAssist{
-    margin-top: 15%;
+#numeroAssist {
+  margin-top: 15%;
 }
 /*
 **************************************************************************************************
 *      Accueil     *******************************************************************************
 **************************************************************************************************
 */
-#Accueil{
-    margin-top: 100px;
+#Accueil {
+  margin-top: 100px;
 }
 
-.Position{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 90px;
-    grid-auto-rows: minmax(100px, auto);
-    margin-top: 80px;
-    margin-right: 40px;
-    margin-left: 40px;
+.Position {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 90px;
+  margin-top: 80px;
+  margin-right: 40px;
+  margin-left: 40px;
 }
 
 #RapportdeVisite {
-    border: 2px double #ffffff;
-    border-radius: 20px;
-    background:linear-gradient(#77aadd, #90e0e7);
-    padding: 25px 5px 25px 5px; 
-       
+  border: 2px double #ffffff;
+  border-radius: 20px;
+  background: linear-gradient(#77aadd, #90e0e7);
+  padding: 25px 5px 25px 5px;
 }
 #ConsultationdesRapports {
-    border: 2px double #ffffff;
-    border-radius: 20px;
-    background:linear-gradient(#77aadd, #90e0e7);
-    padding: 25px 5px 25px 5px;
-    
+  border: 2px double #ffffff;
+  border-radius: 20px;
+  background: linear-gradient(#77aadd, #90e0e7);
+  padding: 25px 5px 25px 5px;
 }
 #Medicaments {
-    border: 2px double #ffffff;
-    border-radius: 20px;
-    background:linear-gradient(#77aadd, #90e0e7);
-    padding: 25px 5px 25px 5px;
+  border: 2px double #ffffff;
+  border-radius: 20px;
+  background: linear-gradient(#77aadd, #90e0e7);
+  padding: 25px 5px 25px 5px;
 }
 #Praticiens {
-    border: 2px double #ffffff;
-    border-radius: 20px;
-    background:linear-gradient(#77aadd, #90e0e7);
-    padding: 25px 5px 25px 5px;
+  border: 2px double #ffffff;
+  border-radius: 20px;
+  background: linear-gradient(#77aadd, #90e0e7);
+  padding: 25px 5px 25px 5px;
 }
 /*
 **************************************************************************************************
 *      RapportVisite     *************************************************************************
 **************************************************************************************************
 */
-#formRapport {
-    width: 15%;
-    margin: auto;
-    margin-top: 1%;
-    text-align: center;
+.aligncenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.bouducon {
-    margin-top: 20px;
-    margin-bottom: 20px;
+#FormGr1 {
+  display: grid;
+  grid-template-rows: 100px;
+  grid-template-columns: repeat(2, 400px);
+  grid-gap: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
-#scrollbarPra{
-    scrollbar-width: thin;
+#FormGr2 {
+  display: grid;
+  grid-template-rows: 100px;
+  grid-template-columns: repeat(2, 400px);
+  grid-gap: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+#FormGr3 {
+  display: grid;
+  grid-template-rows: 100px;
+  grid-template-columns: repeat(2, 400px);
+  grid-gap: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+#Form1 {
+  background-color: #ceeeaa;
+}
+#Form2 {
+  background-color: #eeb4aa;
+}
+#Form3 {
+  background-color: #eec4aa;
+}
+#Form4 {
+  background-color: #eed4aa;
+}
+#Form5 {
+  background-color: #eee4aa;
+}
+#Form6 {
+  background-color: #dceeaa;
+}
+#Form7 {
+  background-color: #b5eeaa;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+#Form8 {
+  background-color: #aaeebb;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.scrollbarthin {
+  scrollbar-width: thin;
+}
+#smiles_line {
+  display: grid;
+  grid-template-columns: repeat(5, 37px);
+  grid-gap: 10px;
+  margin-left: 9px;
+}
+.smiles {
+  height: 37px;
+  width: 36.3px;
 }
 /*
 **************************************************************************************************
 *      ConsultMedoc     **************************************************************************
 **************************************************************************************************
 */
-#tableConsultMedoc{
-    border: 2px solid #333;
-    border-spacing: 0px;
-    border-radius: 8px;
-    text-align: center;
-    margin-top: 2%;
-    margin-bottom: 2%;
-    margin-left: auto;
-    margin-right: auto;
+#tableConsultMedoc {
+  border: 2px solid #333;
+  border-spacing: 0px;
+  border-radius: 8px;
+  text-align: center;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  margin-left: auto;
+  margin-right: auto;
 }
 /*
 **************************************************************************************************
 *      ConsultPra     ****************************************************************************
 **************************************************************************************************
 */
-#tableConsultPra{
-    border: 2px solid #333;
-    border-spacing: 0px;
-    border-radius: 8px;
-    text-align: center;
-    margin-top: 2%;
-    margin-bottom: 2%;
-    margin-left: auto;
-    margin-right: auto;
+#tableConsultPra {
+  border: 2px solid #333;
+  border-spacing: 0px;
+  border-radius: 8px;
+  text-align: center;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  margin-left: auto;
+  margin-right: auto;
 }
 /*
 **************************************************************************************************
 *      ConsultRap     ****************************************************************************
 **************************************************************************************************
 */
-#tableConsultRap{
-    border: 2px solid #333;
-    border-spacing: 0px;
-    border-radius: 8px;
-    text-align: center;
-    margin-top: 2%;
-    margin-bottom: 2%;
-    margin-left: auto;
-    margin-right: auto;
+#tableConsultRap {
+  border: 2px solid #333;
+  border-spacing: 0px;
+  border-radius: 8px;
+  text-align: center;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  margin-left: auto;
+  margin-right: auto;
 }
 /*
 **************************************************************************************************
 *      BordureTable     **************************************************************************
 **************************************************************************************************
 */
-.BborderR{
-border-right: 1px solid #333;
-border-bottom: 4px solid #333;
+.BborderR {
+  border-right: 1px solid #333;
+  border-bottom: 4px solid #333;
 }
-.BborderL{
-border-left: 1px solid #333;
-border-bottom: 4px solid #333;
+.BborderL {
+  border-left: 1px solid #333;
+  border-bottom: 4px solid #333;
 }
-.BborderM{
-border-right: 1px solid #333;
-border-left: 1px solid #333;
-border-bottom: 4px solid #333;
+.BborderM {
+  border-right: 1px solid #333;
+  border-left: 1px solid #333;
+  border-bottom: 4px solid #333;
 }
 .borderR {
-border-right: 1px solid #333;
-border-bottom: 1px solid rgba(51, 51, 51, .2);
+  border-right: 1px solid #333;
+  border-bottom: 1px solid rgba(51, 51, 51, 0.2);
 }
 .borderL {
-border-left: 1px solid #333;
-border-bottom: 1px solid rgba(51, 51, 51, .2);
+  border-left: 1px solid #333;
+  border-bottom: 1px solid rgba(51, 51, 51, 0.2);
 }
 .borderM {
-border-right: 1px solid #333;
-border-left: 1px solid #333;
-border-bottom: 1px solid rgba(51, 51, 51, .2);
+  border-right: 1px solid #333;
+  border-left: 1px solid #333;
+  border-bottom: 1px solid rgba(51, 51, 51, 0.2);
 }

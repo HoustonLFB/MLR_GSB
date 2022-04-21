@@ -39,67 +39,79 @@ $medicamentsAll = $resDBmedicament->fetchAll();
         </div>
     </header>
 
-    <div name="formRapport" id="formRapport">
+    <div name="formRapport" class="aligncenter">
         <form action="ajoutRapport.php" method="POST">
-            <div class='bouducon'>
-                Quel Praticien : <select name="praticienChoix" id="scrollbarPra">
-                    <?php
-                    foreach ($resDBpraticien as $occurencePra) {
-                        echo "<option value='" . $occurencePra['praID'] . "''>" . $occurencePra['praNom'] . " " . $occurencePra['praPrenom'] . "</option>";
-                    }
-                    ?>
-                </select><br>
+            <div id="FormGr1">
+                <div id='Form1' class="aligncenter">
+                    Quel Praticien : <select name="praticienChoix" class="scrollbarthin">
+                        <?php
+                        foreach ($resDBpraticien as $occurencePra) {
+                            echo "<option value='" . $occurencePra['praID'] . "''>" . $occurencePra['praNom'] . " " . $occurencePra['praPrenom'] . "</option>";
+                        }
+                        ?>
+                    </select><br>
+                </div>
+
+                <div id='Form2' class="aligncenter">
+                    Remplaçant <input type="checkbox" name="remplaDemande" id="remplaDemande" class="remplaON"><br>
+                </div>
             </div>
 
-            <div class='bouducon'>
-                Remplaçant <input type="checkbox" name="remplaDemande" id="remplaDemande" class="remplaON"><br>
+            <div id="FormGr2">
+                <div id='Form3' class="aligncenter">
+                    Quand visite ? <input type="date" name="dateVisite" id="dateVisite" required><br>
+                </div>
+
+                <div id='Form4' class="aligncenter">
+                    Motif de visite : 
+                    <select name="motif" id="motif" required>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select> <br>
+                </div>
             </div>
 
-            <div class='bouducon'>
-                Quand visite ? <input type="date" name="dateVisite" id="dateVisite" required><br>
+            <div id="FormGr3">
+                <div id='Form5'class="aligncenter">
+                    Medicament 1 : <select name="medoc1" id="medoc1" class="scrollbarthin" required>
+                        <?php
+                        foreach ($medicamentsAll as $occurenceMedoc) {
+                            $IDmedoc = $occurenceMedoc[0];
+                            $libMedoc = $occurenceMedoc[1];
+                            echo "<option value='$IDmedoc'>$libMedoc</option>";
+                        }
+                        ?>
+                    </select>
+                </div>
+
+                <div id='Form6'class="aligncenter">
+                    Medicament 2 : <select name="medoc2" id="medoc2" class="scrollbarthin" required>
+                        <?php
+                        foreach ($medicamentsAll as $occurenceMedoc) {
+                            $IDmedoc = $occurenceMedoc[0];
+                            $libMedoc = $occurenceMedoc[1];
+                            echo "<option value='$IDmedoc'>$libMedoc</option>";
+                        }
+                        ?>
+                    </select><br>
+                </div>
             </div>
 
-            <div class='bouducon'>
-                Motif de visite :
-                <select name="motif" id="motif" required>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                </select> <br>
-            </div>
-
-            <div class='bouducon'>
-                Medicament 1 : <select name="medoc1" id="medoc1" required>
-                    <?php
-                    foreach ($medicamentsAll as $occurenceMedoc) {
-                        $IDmedoc = $occurenceMedoc[0];
-                        $libMedoc = $occurenceMedoc[1];
-                        echo "<option value='$IDmedoc'>$libMedoc</option>";
-                    }
-                    ?>
-                </select>
-            </div>
-
-            <div class='bouducon'>
-                Medicament 2 : <select name="medoc2" id="medoc2">
-                    <?php
-                    foreach ($medicamentsAll as $occurenceMedoc) {
-                        $IDmedoc = $occurenceMedoc[0];
-                        $libMedoc = $occurenceMedoc[1];
-                        echo "<option value='$IDmedoc'>$libMedoc</option>";
-                    }
-                    ?>
-                </select><br>
-            </div>
-
-            <div class='bouducon'>
+            <div id='Form7'>
                 Coefficient de confiance : <br>
-                <input name="rangeCoef" id="rangeCoef" type="range" style="width: 200px; height: 40px" min="1" max="5" value="1" step="1" list="increments" oninput="showMainTstatValue(this.value)" onchange="showMainTstatValue(this.value)">
-                <span id="rangeShow">1</span> <br>
+                <input name="rangeCoef" type="range" style="width: 200px; height: 40px" min="1" max="5" step="1">
+                <div id="smiles_line">
+                    <div><img src="..\assets\img\smile\Smile1.png" class="smiles"></img></div>
+                    <div><img src="..\assets\img\smile\Smile2.png" class="smiles"></img></div>
+                    <div><img src="..\assets\img\smile\Smile3.png" class="smiles"></img></div>
+                    <div><img src="..\assets\img\smile\Smile4.png" class="smiles"></img></div>
+                    <div><img src="..\assets\img\smile\Smile5.png" class="smiles"></img></div>
+                </div>
             </div>
 
 
-            <div class='bouducon'>
+            <div id='Form8'>
                 Bilan du rapport : <br>
                 <textarea name="rapBilan" id="rapBilan"></textarea><br>
             </div>
