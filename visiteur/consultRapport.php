@@ -35,11 +35,12 @@ $rapportAll = $resBDrapport->fetchAll();
     <table id="tableConsultRap">
         <thead>
             <tr>
-                <th colspan="9">Consultation des Rapports de Visites</th>
+                <th colspan="10">Consultation des Rapports de Visites</th>
             </tr>
             <tr>
                 <th width="150px" class='BborderR'>Visiteur</th>
                 <th width="150px" class='BborderM'>Praticien</th>
+                <th width="150px" class='BborderM'>Remplaçant</th>
                 <th width="150px" class='BborderM'>Date Rapport</th>
                 <th width="150px" class='BborderM'>Date Visite</th>
                 <th width="150px" class='BborderM'>Bilan</th>
@@ -52,8 +53,8 @@ $rapportAll = $resBDrapport->fetchAll();
         <?php
         foreach ($rapportAll as $occurence) {
             //MISE EN FORME DE LA DATE
-            $dateRapport = date_format(new DateTime($occurence[3]), 'd/m/Y');
-            $dateVisite = date_format(new DateTime($occurence[4]), 'd/m/Y');
+            $dateRapport = date_format(new DateTime($occurence[4]), 'd/m/Y');
+            $dateVisite = date_format(new DateTime($occurence[5]), 'd/m/Y');
 
             //RECUP NOM VISITEURS
             $visMatricule = $occurence[1];
@@ -68,13 +69,13 @@ $rapportAll = $resBDrapport->fetchAll();
             $praticien = $resBDpraticien->fetch();
 
             //RECUP NOM MEDOC 1
-            $nomMedoc1 = $occurence[7];
+            $nomMedoc1 = $occurence[8];
             $reqSQLmedoc1 = "SELECT * FROM medicaments WHERE medDepotlegal ='$nomMedoc1'";
             $resBDmedoc1 = $connexion->query($reqSQLmedoc1);
             $medoc1 = $resBDmedoc1->fetch();
 
             //RECUP NOM MEDOC 2
-            $nomMedoc2 = $occurence[8];
+            $nomMedoc2 = $occurence[9];
             $reqSQLmedoc2 = "SELECT * FROM medicaments WHERE medDepotlegal ='$nomMedoc2'";
             $resBDmedoc2 = $connexion->query($reqSQLmedoc2);
             $medoc2 = $resBDmedoc2->fetch();
@@ -84,13 +85,14 @@ $rapportAll = $resBDrapport->fetchAll();
                 <tr>
                     <td class='borderR'>$visiteur[1] $visiteur[2]</td>
                     <td class='borderM'>$praticien[1] $praticien[2]</td>
+                    <td class='borderM'>$occurence[3]</td>
                     <td class='borderM'>$dateRapport</td>
                     <td class='borderM'>$dateVisite</td>
-                    <td class='borderM'>$occurence[5]</td>
                     <td class='borderM'>$occurence[6]</td>
+                    <td class='borderM'>$occurence[7]</td>
                     <td class='borderM'>$medoc1[1]</td>
                     <td class='borderM'>$medoc2[1]</td>
-                    <td class='borderL'>$occurence[9]/5</td>
+                    <td class='borderL'>$occurence[10]/5</td>
                 </tr>
             ";
         }
