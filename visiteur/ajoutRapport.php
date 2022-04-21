@@ -32,7 +32,6 @@ if ($medoc1 == $medoc2) {
 }
 
 //CREATION de la requete
-
 //SI PAS DE REMPLACANT
 if (empty($remplaNom)) {
     $reqSQLinto = "INSERT INTO rapportVisite VALUES (NULL, '$IDuser', $praID, NULL, now(), '$dateVisite', '$rapBilan', '$rapMotif', '$medoc1', '$medoc2', $coefConf);";
