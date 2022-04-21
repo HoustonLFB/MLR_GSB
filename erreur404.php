@@ -1,9 +1,9 @@
 <?php
 session_start();
 
-include("../includes/connexionbdd.inc.php");
-include("../includes/historique.inc.php");
-include("../includes/verifConnexVisit.inc.php");
+include("includes/connexionbdd.inc.php");
+include("includes/historique.inc.php");
+include("includes/verifConnexVisit.inc.php");
 
 ?>
 
@@ -19,7 +19,7 @@ include("../includes/verifConnexVisit.inc.php");
     <script type="text/javascript" language="JavaScript" src="assets/js/js.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="assets/img/favicon.ico" />
-    <title>Erreur 404</title>    
+    <title>Erreur 404</title>
 </head>
 
 <body>
@@ -33,13 +33,14 @@ include("../includes/verifConnexVisit.inc.php");
         <h3>Oops la page n'est pas trouvée</h3>
     </div>
 
-    <div id="Retour">
-        <input type="submit" id='retour' class='center' class="link" value="RETOUR">
-    </div>
-    
+    <a href="http://mlr-gsb.site/">
+        <div id="Retour" class='center'>
+            <input type="button" id='retour' class="link" value="RETOUR">
+        </div>
+    </a>
 
-        
-</body>    
+
+</body>
 
 
 
