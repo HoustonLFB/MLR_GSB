@@ -3,7 +3,6 @@ session_start();
 
 include("includes/connexionbdd.inc.php");
 include("includes/historique.inc.php");
-include("includes/verifConnexVisit.inc.php");
 
 ?>
 
