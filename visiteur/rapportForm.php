@@ -34,12 +34,34 @@ $medicamentsAll = $resDBmedicament->fetchAll();
 </head>
 
 <body>
+
     <header>
         <div class="center">
             <img id="logo" src="../assets/img/logo-gsb.png">
         </div>
     </header>
-
+    <div class="aligncenter">
+        <?php
+        if (isset($_SESSION['erreurDateMsg'])) {
+            echo '<script type="text/javascript">alertMauvaiseDate();</script>';
+            echo "
+                <div style='color: red;'>
+                La date de visite ne peut pas être ultérieur à la date de saisie.
+                </div>
+            ";
+            unset($_SESSION['erreurDateMsg']);
+        }
+        if (isset($_SESSION['erreurDoubleProd'])) {
+            echo '<script type="text/javascript">alertDoubleProd();</script>';
+            echo "
+                <div style='color: red;'>
+                Les deux médicaments ne peuvent pas être les mêmes.
+                </div>
+            ";
+            unset($_SESSION['erreurDoubleProd']);
+        }
+        ?>
+    </div>
     <div name="formRapport" class="aligncenter">
         <form action="ajoutRapport.php" method="POST">
             <div id="FormGr1">
@@ -74,7 +96,7 @@ $medicamentsAll = $resDBmedicament->fetchAll();
             </div>
 
             <div id="FormGr3">
-                <div id='Form5'class="aligncenter">
+                <div id='Form5' class="aligncenter">
                     Medicament 1 : <select name="medoc1" id="medoc1" class="scrollbarthin" required>
                         <?php
                         foreach ($medicamentsAll as $occurenceMedoc) {
@@ -86,7 +108,7 @@ $medicamentsAll = $resDBmedicament->fetchAll();
                     </select>
                 </div>
 
-                <div id='Form6'class="aligncenter">
+                <div id='Form6' class="aligncenter">
                     Medicament 2 : <select name="medoc2" id="medoc2" class="scrollbarthin" required>
                         <?php
                         foreach ($medicamentsAll as $occurenceMedoc) {
@@ -119,27 +141,9 @@ $medicamentsAll = $resDBmedicament->fetchAll();
 
             <input type="submit" />
         </form>
-        <?php
-        if (isset($_SESSION['erreurDateMsg'])) {
-            echo '<script type="text/javascript">alertMauvaiseDate();</script>';
-            echo "
-                <div style='color: red;'>
-                La date de visite ne peut pas être ultérieur à la date de saisie.
-                </div>
-            ";
-            unset($_SESSION['erreurDateMsg']);
-        }
-        if (isset($_SESSION['erreurDoubleProd'])) {
-            echo '<script type="text/javascript">alertDoubleProd();</script>';
-            echo "
-                <div style='color: red;'>
-                Les deux médicaments ne peuvent pas être les mêmes.
-                </div>
-            ";
-            unset($_SESSION['erreurDoubleProd']);
-        }
-        ?>
+
     </div>
+
 </body>
 
 </html>
