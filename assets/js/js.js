@@ -15,6 +15,19 @@ function showMainTstatValue(newValue)
  	document.getElementById("rangeShow").innerHTML = newValue;
 }
 
+//CONSULT RAPPORT
+
+function verifSuppression() {
+    $verif=confirm("Êtes vous certain de supprimer ces éléments ?");
+	if ($verif==false)
+	{
+        document.getElementById("supprChecked").checked = false;
+
+	}
+	return $verif;
+}
+
+
 //========== SIDE BAR =============
 /* Set the width of the sidebar to 250px and the left margin of the page content to 250px */
 function openNav() {
