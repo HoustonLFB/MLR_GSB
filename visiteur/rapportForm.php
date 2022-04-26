@@ -64,7 +64,7 @@ $medicamentsAll = $resDBmedicament->fetchAll();
             echo '<script type="text/javascript">alertDoubleProd();</script>';
             echo "
                 <div style='color: black;'>
-                La rapport a bien été ajouté.
+                Le rapport a bien été ajouté.
                 </div>
             ";
             unset($_SESSION['rapAdded']);
