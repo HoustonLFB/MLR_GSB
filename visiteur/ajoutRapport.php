@@ -19,7 +19,7 @@ if (!empty($_POST['remplaNom'])) {
 }
 
 //VERIF VALIDITE date
-if ($dateVisite > (date('Y-m-c H:i:s'))) {
+if ($dateVisite > (date('Y-m-d'))) {
     header('Location: rapportForm.php');
     $_SESSION['erreurDateMsg'] = True;
     exit();
