@@ -11,17 +11,6 @@ $userpass = $_POST['userpass'];
 $reqSQLlogin = "SELECT * FROM compte WHERE user='$userid'";
 $resultatDB = $connexion->query($reqSQLlogin);
 
-//$qteRes = $resultatDB -> rowCount();
-
-
-
-//S'IL N'Y A PAS QU'UNE SEULE LIGNE CA RETOURNE SUR LA PAGE DE LOGIN
-//POUR PLUS TARD -----> METTRE MESSAGE D'ERREUR DANS FORM LOGIN INDEX
-// if ($qteRes != 1) {
-//     header("Location: /index.php");
-//     exit();
-// }
-
 //MISE DU RESULTAT DANS VARIABLE
 $ligneDB = $resultatDB->fetch();
 //RECUPERATION DES DIFFERENTES INFOS DANS VARIABLE 
@@ -38,20 +27,21 @@ if ($ok) {
     $_SESSION['IDuser'] = $IDuser;
     $_SESSION['NIVuser'] = $NIVuser;
 
+    //AJOUT HISTORIQUE CONNEX BD
     $IP = $_SERVER['REMOTE_ADDR'];
     $reqSQLhistoLog = "INSERT INTO historiqueConnex VALUES ('$IP', '$userid', NULL, 1, now())";
     $connexion->exec($reqSQLhistoLog);
-    echo $reqSQLhistoLog;
+
     header("Location: redirection.php");
     exit();
 } else {
     $_SESSION['erreurLogMsg'] = True;
 
+    //AJOUT HISTORIQUE CONNEX BD
     $IP = $_SERVER['REMOTE_ADDR'];
     $reqSQLhistoLog = "INSERT INTO historiqueConnex VALUES ('$IP', '$userid','$userpass',0,now())";
     $connexion->exec($reqSQLhistoLog);
 
-    echo $reqSQLhistoLog;
     header("Location: index.php");
     exit();
 }
