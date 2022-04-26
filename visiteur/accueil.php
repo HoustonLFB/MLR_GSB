@@ -22,7 +22,7 @@ include("../includes/verifConnexVisit.inc.php");
 </head>
 
 <body>
-    <div id="Accueil">
+    <div id="Accueil Visiteur">
         <h1>ACCUEIL</h1>
     </div>
     <div class="Position">
