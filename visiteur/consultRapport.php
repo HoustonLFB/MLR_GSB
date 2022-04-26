@@ -32,58 +32,82 @@ $rapportAll = $resBDrapport->fetchAll();
         </div>
     </header>
 
-    <table id="tableConsultRap">
-        <thead>
-            <tr>
-                <th colspan="10">Consultation des Rapports de Visites</th>
-            </tr>
-            <tr>
-                <th width="150px" class='BborderR'>Visiteur</th>
-                <th width="150px" class='BborderM'>Praticien</th>
-                <th width="150px" class='BborderM'>Remplaçant</th>
-                <th width="150px" class='BborderM'>Date Rapport</th>
-                <th width="150px" class='BborderM'>Date Visite</th>
-                <th width="150px" class='BborderM'>Bilan</th>
-                <th width="150px" class='BborderM'>Motif</th>
-                <th width="150px" class='BborderM'>Médicament 1</th>
-                <th width="150px" class='BborderM'>Médicament 2</th>
-                <th width="150px" class='BborderL'>Coefficient</th>
-            </tr>
-        </thead>
-        <?php
-        foreach ($rapportAll as $occurence) {
-            //MISE EN FORME DE LA DATE
-            $dateRapport = date_format(new DateTime($occurence[4]), 'd/m/Y');
-            $dateVisite = date_format(new DateTime($occurence[5]), 'd/m/Y');
-
-            //RECUP NOM VISITEURS
-            $visMatricule = $occurence[1];
-            $reqSQLvisiteur = "SELECT * FROM visiteurs WHERE visMatricule ='$visMatricule'";
-            $resBDvisiteur = $connexion->query($reqSQLvisiteur);
-            $visiteur = $resBDvisiteur->fetch();
-
-            //RECUP NOM PRATICIENS
-            $praID = $occurence[2];
-            $reqSQLpraticien = "SELECT * FROM praticiens WHERE praID ='$praID'";
-            $resBDpraticien = $connexion->query($reqSQLpraticien);
-            $praticien = $resBDpraticien->fetch();
-
-            //RECUP NOM MEDOC 1
-            $nomMedoc1 = $occurence[8];
-            $reqSQLmedoc1 = "SELECT * FROM medicaments WHERE medDepotlegal ='$nomMedoc1'";
-            $resBDmedoc1 = $connexion->query($reqSQLmedoc1);
-            $medoc1 = $resBDmedoc1->fetch();
-
-            //RECUP NOM MEDOC 2
-            $nomMedoc2 = $occurence[9];
-            $reqSQLmedoc2 = "SELECT * FROM medicaments WHERE medDepotlegal ='$nomMedoc2'";
-            $resBDmedoc2 = $connexion->query($reqSQLmedoc2);
-            $medoc2 = $resBDmedoc2->fetch();
-
-            //AFFICHAGE 
-            echo "
+    <?php
+    if (isset($_SESSION['supprMultiDone'])) {
+        echo '<script type="text/javascript">supprMultiDone();</script>';
+        echo "
+                <div style='color: black;' class='aligncenter'>
+                Le rapport ont bien été supprimés.
+                </div>
+            ";
+        unset($_SESSION['supprMultiDone']);
+    }
+    if (isset($_SESSION['supprDone'])) {
+        echo '<script type="text/javascript">supprDone();</script>';
+        echo "
+                <div style='color: black;' class='aligncenter'>
+                Le rapport a bien été supprimé.
+                </div>
+            ";
+        unset($_SESSION['supprDone']);
+    }
+    ?>
+    <form method='POST' name='supprRapport' onsubmit=" return verifSuppression(this)">
+        <table id="tableConsultRap">
+            <thead>
                 <tr>
-                    <td class='borderR'>$visiteur[1] $visiteur[2]</td>
+                    <th colspan="1"><button formaction='supprRapport.php'>Supprimer</button><br><button formaction='modifRapport.php' style="padding: 1px 12px;">Modifier</button></th>
+                    <th colspan="10">Consultation des Rapports de Visites</th>
+                </tr>
+                <tr>
+                    <th class='BborderR'>Sélection</th>
+                    <th width="150px" class='BborderM'>Visiteur</th>
+                    <th width="150px" class='BborderM'>Praticien</th>
+                    <th width="150px" class='BborderM'>Remplaçant</th>
+                    <th width="150px" class='BborderM'>Date Rapport</th>
+                    <th width="150px" class='BborderM'>Date Visite</th>
+                    <th width="150px" class='BborderM'>Bilan</th>
+                    <th width="150px" class='BborderM'>Motif</th>
+                    <th width="150px" class='BborderM'>Médicament 1</th>
+                    <th width="150px" class='BborderM'>Médicament 2</th>
+                    <th width="150px" class='BborderL'>Coefficient</th>
+                </tr>
+            </thead>
+            <?php
+            foreach ($rapportAll as $occurence) {
+                //MISE EN FORME DE LA DATE
+                $dateRapport = date_format(new DateTime($occurence[4]), 'd/m/Y');
+                $dateVisite = date_format(new DateTime($occurence[5]), 'd/m/Y');
+
+                //RECUP NOM VISITEURS
+                $visMatricule = $occurence[1];
+                $reqSQLvisiteur = "SELECT * FROM visiteurs WHERE visMatricule ='$visMatricule'";
+                $resBDvisiteur = $connexion->query($reqSQLvisiteur);
+                $visiteur = $resBDvisiteur->fetch();
+
+                //RECUP NOM PRATICIENS
+                $praID = $occurence[2];
+                $reqSQLpraticien = "SELECT * FROM praticiens WHERE praID ='$praID'";
+                $resBDpraticien = $connexion->query($reqSQLpraticien);
+                $praticien = $resBDpraticien->fetch();
+
+                //RECUP NOM MEDOC 1
+                $nomMedoc1 = $occurence[8];
+                $reqSQLmedoc1 = "SELECT * FROM medicaments WHERE medDepotlegal ='$nomMedoc1'";
+                $resBDmedoc1 = $connexion->query($reqSQLmedoc1);
+                $medoc1 = $resBDmedoc1->fetch();
+
+                //RECUP NOM MEDOC 2
+                $nomMedoc2 = $occurence[9];
+                $reqSQLmedoc2 = "SELECT * FROM medicaments WHERE medDepotlegal ='$nomMedoc2'";
+                $resBDmedoc2 = $connexion->query($reqSQLmedoc2);
+                $medoc2 = $resBDmedoc2->fetch();
+
+                //AFFICHAGE 
+                echo "
+                <tr>
+                    <td class='borderR'><input type='checkbox' name='supprChecked[]' id='supprChecked' value='$occurence[0]'></td>
+                    <td class='borderM'>$visiteur[1] $visiteur[2]</td>
                     <td class='borderM'>$praticien[1] $praticien[2]</td>
                     <td class='borderM'>$occurence[3]</td>
                     <td class='borderM'>$dateRapport</td>
@@ -95,9 +119,10 @@ $rapportAll = $resBDrapport->fetchAll();
                     <td class='borderL'>$occurence[10]/5</td>
                 </tr>
             ";
-        }
-        ?>
-    </table>
+            }
+            ?>
+        </table>
+    </form>
 </body>
 
 </html>
