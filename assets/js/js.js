@@ -5,7 +5,9 @@ function alertMauvaiseDate() {
 function alertDoubleProd() {
     alert('Les deux médicaments ne peuvent pas être les mêmes.');
 }
-
+function rapAdded() {
+    alert('La rapport a bien été ajouté. ');
+}
 
 // RANGE COEF RAPPORT FORM
 function showMainTstatValue(newValue)
