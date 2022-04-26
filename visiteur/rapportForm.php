@@ -60,6 +60,15 @@ $medicamentsAll = $resDBmedicament->fetchAll();
             ";
             unset($_SESSION['erreurDoubleProd']);
         }
+        if (isset($_SESSION['rapAdded'])) {
+            echo '<script type="text/javascript">alertDoubleProd();</script>';
+            echo "
+                <div style='color: black;'>
+                La rapport a bien été ajouté.
+                </div>
+            ";
+            unset($_SESSION['rapAdded']);
+        }
         ?>
     </div>
     <div name="formRapport" class="aligncenter">

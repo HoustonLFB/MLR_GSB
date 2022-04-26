@@ -42,3 +42,4 @@ if (empty($remplaNom)) {
 $connexion->exec($reqSQLinto);
 
 header('Location: rapportForm.php');
+$_SESSION['rapAdded'] = True;
