@@ -27,7 +27,7 @@ include("../includes/verifConnexVisit.inc.php");
     ?>
 
     <div id="Accueil Visiteur">
-        <h1>ACCUEIL</h1>
+        <h1>ACCUEIL VISITEUR</h1>
     </div>
     <div class="Position">
         <a href="rapportForm.php">
