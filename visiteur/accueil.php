@@ -21,7 +21,11 @@ include("../includes/verifConnexVisit.inc.php");
     <title>Accueil visiteur - GSB</title>
 </head>
 
-<body>
+<body id="main">
+    <?php
+    include("../includes/bandeau.inc.php");
+    ?>
+
     <div id="Accueil Visiteur">
         <h1>ACCUEIL</h1>
     </div>
