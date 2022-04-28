@@ -25,11 +25,11 @@ if ($dateVisite > (date('Y-m-d'))) {
     exit();
 }
 //VERIF DOUBLE PRODUIT
-if ($medoc1 == $medoc2) {
-    header('Location: rapportForm.php');
-    $_SESSION['erreurDoubleProd'] = True;
-    exit();
-}
+// if ($medoc1 == $medoc2) {
+//     header('Location: rapportForm.php');
+//     $_SESSION['erreurDoubleProd'] = True;
+//     exit();
+// }
 
 //CREATION de la requete
 if (empty($remplaNom)) { //SI PAS DE REMPLACANT
