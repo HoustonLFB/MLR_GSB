@@ -4,7 +4,6 @@ session_start();
 include("../includes/connexionbdd.inc.php");
 include("../includes/historique.inc.php");
 include("../includes/verifConnexVisit.inc.php");
-
 ?>
 
 
@@ -21,35 +20,36 @@ include("../includes/verifConnexVisit.inc.php");
     <title>Accueil visiteur - GSB</title>
 </head>
 
-<body id="main">
+<body>
     <?php
-    include("../includes/bandeau.inc.php");
+    include("../includes/nav.inc.php");
     ?>
-
-    <div id="Accueil Visiteur">
-        <h1>ACCUEIL VISITEUR</h1>
-    </div>
-    <div class="Position">
-        <a href="rapportForm.php">
-            <div id="RapportdeVisite">
-                <h4>Rapport de Visite</h4>
-            </div>
-        </a>
-        <a href="consultRapport.php">
-            <div id="ConsultationdesRapports">
-                <h4>Consultation des Rapports</h4>
-            </div>
-        </a>
-        <a href="consultMedoc.php">
-            <div id="Medicaments">
-                <h4>Consultation des Médicaments</h4>
-            </div>
-        </a>
-        <a href="consultPra.php">
-            <div id="Praticiens">
-                <h4>Consultation des Praticiens</h4>
-            </div>
-        </a>
+    <div class="main">
+        <div>
+            <h1>ACCUEIL VISITEUR</h1>
+        </div>
+        <div class="Position">
+            <a href="rapportForm.php">
+                <div id="RapportdeVisite">
+                    <h4>Rapport de Visite</h4>
+                </div>
+            </a>
+            <a href="consultRapport.php">
+                <div id="ConsultationdesRapports">
+                    <h4>Consultation des Rapports</h4>
+                </div>
+            </a>
+            <a href="consultMedoc.php">
+                <div id="Medicaments">
+                    <h4>Consultation des Médicaments</h4>
+                </div>
+            </a>
+            <a href="consultPra.php">
+                <div id="Praticiens">
+                    <h4>Consultation des Praticiens</h4>
+                </div>
+            </a>
+        </div>
     </div>
 </body>
 
