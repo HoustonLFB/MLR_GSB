@@ -108,7 +108,7 @@ $rapportAll = $resBDrapport->fetchAll();
                 // 2 Nouveauté
                 // 3 Chute de prescriptions
                 // 4 Remplaçant
-                switch ($_POST['motif']) {
+                switch ($occurence[7]) {
                     case "1":
                         $motif = "Renouvellement";
                         break;
