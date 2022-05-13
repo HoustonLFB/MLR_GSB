@@ -103,6 +103,26 @@ $rapportAll = $resBDrapport->fetchAll();
                 $resBDmedoc2 = $connexion->query($reqSQLmedoc2);
                 $medoc2 = $resBDmedoc2->fetch();
 
+                //MOTIF
+                // 1 Renouvellement
+                // 2 Nouveauté
+                // 3 Chute de prescriptions
+                // 4 Remplaçant
+                switch ($_POST['motif']) {
+                    case "1":
+                        $motif = "Renouvellement";
+                        break;
+                    case "2":
+                        $motif = "Nouveauté";
+                        break;
+                    case "3":
+                        $motif = "Chute de prescriptions";
+                        break;
+                    case "4":
+                        $motif = "Remplaçant";
+                        break;
+                }
+
                 //AFFICHAGE 
                 echo "
                 <tr>
@@ -113,7 +133,7 @@ $rapportAll = $resBDrapport->fetchAll();
                     <td class='borderM'>$dateRapport</td>
                     <td class='borderM'>$dateVisite</td>
                     <td class='borderM'>$occurence[6]</td>
-                    <td class='borderM'>$occurence[7]</td>
+                    <td class='borderM'>$motif</td>
                     <td class='borderM'>$medoc1[1]</td>
                     <td class='borderM'>$medoc2[1]</td>
                     <td class='borderL'>$occurence[10]/5</td>
