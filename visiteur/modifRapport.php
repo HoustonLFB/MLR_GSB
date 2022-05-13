@@ -22,16 +22,19 @@ foreach ($_POST['supprChecked'] as $occ) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../assets/img/favicon.ico" />
 
-    <title>Formulaire rapport - GSB</title>
+    <title>Modification rapport - GSB</title>
 
 </head>
 
 <body>
-    <header>
-        <div class="center">
-            <img id="logo" src="../assets/img/logo-gsb.png">
-        </div>
-    </header>
+    <?php
+    include("../includes/nav.inc.php");
+    ?>
+
+    <?php
+    include("../includes/headerGSB.inc.php");
+    ?>
+
     <table id="tableConsultRap">
         <thead>
             <tr>
@@ -105,6 +108,7 @@ foreach ($_POST['supprChecked'] as $occ) {
 
     </table>
     <input type='submit'>
+
 </body>
 
 </html>
