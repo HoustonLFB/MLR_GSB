@@ -125,8 +125,14 @@ $rapportAll = $resBDrapport->fetchAll();
 
                 //AFFICHAGE 
                 echo "
-                <tr>
-                    <td class='borderR'><input type='checkbox' name='supprChecked[]' id='supprChecked' value='$occurence[0]'></td>
+                <tr>";
+                if ($_SESSION['IDuser'] == $occurence[1]) {
+                    echo "<td class='borderR'><input type='checkbox' name='supprChecked[]' id='supprChecked' value='$occurence[0]'></td>";
+                } else {
+                    echo "<td class='borderR'></td>";
+                }
+
+                echo "
                     <td class='borderM'>$visiteur[1] $visiteur[2]</td>
                     <td class='borderM'>$praticien[1] $praticien[2]</td>
                     <td class='borderM'>$occurence[3]</td>
