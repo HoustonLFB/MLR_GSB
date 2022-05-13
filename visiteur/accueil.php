@@ -35,19 +35,19 @@ include("../includes/verifConnexVisit.inc.php");
                 <h4>Rapport de Visite</h4>
             </div>
         </a>
+        <a href="consultRapport.php">
+            <div id="ConsultationdesRapports">
+                <h4>Consultation des Rapports</h4>
+            </div>
+        </a>
         <a href="consultMedoc.php">
             <div id="Medicaments">
-                <h4>Médicaments</h4>
+                <h4>Consultation des Médicaments</h4>
             </div>
         </a>
         <a href="consultPra.php">
             <div id="Praticiens">
-                <h4>Praticiens</h4>
-            </div>
-        </a>
-        <a href="consultRapport.php">
-            <div id="ConsultationdesRapports">
-                <h4>Consultation des Rapports</h4>
+                <h4>Consultation des Praticiens</h4>
             </div>
         </a>
     </div>
