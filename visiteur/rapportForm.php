@@ -42,6 +42,7 @@ $medicamentsAll = $resDBmedicament->fetchAll();
     </header>
     <div class="aligncenter">
         <?php
+        // AFFICHAGE DES ERREURS
         if (isset($_SESSION['erreurDateMsg'])) {
             echo '<script type="text/javascript">alertMauvaiseDate();</script>';
             echo "
@@ -61,7 +62,7 @@ $medicamentsAll = $resDBmedicament->fetchAll();
             unset($_SESSION['erreurDoubleProd']);
         }
         if (isset($_SESSION['rapAdded'])) {
-            echo '<script type="text/javascript">alertDoubleProd();</script>';
+            echo '<script type="text/javascript">rapAdded();</script>';
             echo "
                 <div style='color: black;'>
                 Le rapport a bien été ajouté.
@@ -149,7 +150,7 @@ $medicamentsAll = $resDBmedicament->fetchAll();
                 <textarea name="rapBilan" id="rapBilan"></textarea><br>
             </div>
 
-            <input type="submit" />
+            <input type="submit">
         </form>
 
     </div>
