@@ -25,39 +25,41 @@ $medocAll = $resBDmedoc->fetchAll();
 </head>
 
 <body>
-    <header>
-        <div class="center">
-            <img id="logo" src="../assets/img/logo-gsb.png">
-        </div>
-    </header>
-
-    <table id="tableConsultMedoc">
-        <thead>
-            <tr>
-                <th colspan="2">Consultation des Médicaments</th>
-            </tr>
-            <tr>
-                <th width="200px" class='BborderR'>Deport Légal</th>
-                <th width="200px" class='BborderL'>Nom</th>
-            </tr>
-        </thead>
-
+    <?php
+    include("../includes/nav.inc.php");
+    ?>
+    <div class="main">
         <?php
-        foreach ($medocAll as $occurence) {
-            $codeMed = $occurence[0];
-            $nomMed = $occurence[1];
+        include("../includes/headerGSB.inc.php");
+        ?>
 
-            echo "
+        <table id="tableConsultMedoc">
+            <thead>
+                <tr>
+                    <th colspan="2">Consultation des Médicaments</th>
+                </tr>
+                <tr>
+                    <th width="200px" class='BborderR'>Deport Légal</th>
+                    <th width="200px" class='BborderL'>Nom</th>
+                </tr>
+            </thead>
+
+            <?php
+            foreach ($medocAll as $occurence) {
+                $codeMed = $occurence[0];
+                $nomMed = $occurence[1];
+
+                echo "
                 <tr>
                     <td class='borderR'>$codeMed</td>
                     <td class='borderL'>$nomMed</td>
                 </tr>
             ";
-        }
-        ?>
-    </table>
+            }
+            ?>
+        </table>
 
-
+    </div>
 
 
 </body>

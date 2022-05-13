@@ -25,11 +25,12 @@ $praAll = $resBDpra->fetchAll();
 </head>
 
 <body>
-    <header>
-        <div class="center">
-            <img id="logo" src="../assets/img/logo-gsb.png">
-        </div>
-    </header>
+    <?php
+    include("../includes/nav.inc.php");
+    ?>
+    <?php
+    include("../includes/headerGSB.inc.php");
+    ?>
 
     <table id="tableConsultPra">
         <thead>
@@ -39,7 +40,7 @@ $praAll = $resBDpra->fetchAll();
             <tr>
                 <th width="100px" class='BborderR'>ID</th>
                 <th width="400px" class='BborderL'>Nom</th>
-            </tr >
+            </tr>
         </thead>
 
         <?php
@@ -48,7 +49,7 @@ $praAll = $resBDpra->fetchAll();
             $praNom = $occurence[1];
             $praPrenom = $occurence[2];
 
-            
+
 
             echo "
                 <tr>
@@ -59,9 +60,6 @@ $praAll = $resBDpra->fetchAll();
         }
         ?>
     </table>
-
-
-
 
 </body>
 

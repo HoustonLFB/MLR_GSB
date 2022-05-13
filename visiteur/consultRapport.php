@@ -26,11 +26,12 @@ $rapportAll = $resBDrapport->fetchAll();
 </head>
 
 <body>
-    <header>
-        <div class="center">
-            <img id="logo" src="../assets/img/logo-gsb.png">
-        </div>
-    </header>
+    <?php
+    include("../includes/nav.inc.php");
+    ?>
+    <?php
+    include("../includes/headerGSB.inc.php");
+    ?>
 
     <?php
     if (isset($_SESSION['supprMultiDone'])) {
