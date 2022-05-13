@@ -97,9 +97,10 @@ $medicamentsAll = $resDBmedicament->fetchAll();
                 <div id='Form4' class="aligncenter">
                     Motif de visite : 
                     <select name="motif" id="motif" required>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
+                        <option value="1">Renouvellement</option>
+                        <option value="2">Nouveauté</option>
+                        <option value="3">Chute de prescriptions</option>
+                        <option value="4">Remplaçant</option>
                     </select> <br>
                 </div>
             </div>
