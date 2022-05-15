@@ -1,5 +1,5 @@
 <header>
     <div class="center">
-        <img id="logo" src="../assets/img/logo-gsb.png">
+        <a href=accueil.php><img id="logo" src="../assets/img/logo-gsb.png"></a>
     </div>
 </header>
