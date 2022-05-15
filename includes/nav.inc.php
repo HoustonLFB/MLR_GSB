@@ -31,13 +31,13 @@
     ?>
 
     <div id="links">
-        <a href="rapportForm.php">Formulaire rapport &nbsp; </a>
+        <a href="rapportForm.php">Formulaire rapport</a> &nbsp;
         - &nbsp;
-        <a href="consultRapport.php">Consultation rapports &nbsp; </a>
+        <a href="consultRapport.php">Consultation rapports</a> &nbsp;
         - &nbsp;
-        <a href="consultPra.php">Consultation praticiens &nbsp; </a>
+        <a href="consultPra.php">Consultation praticiens</a> &nbsp;
         - &nbsp;
-        <a href="consultMedoc.php">Consultation médicaments &nbsp; </a>
+        <a href="consultMedoc.php">Consultation médicaments</a> &nbsp;
         - &nbsp;
         <a href="../logout.php">Se déconnecter</a>
     </div>
