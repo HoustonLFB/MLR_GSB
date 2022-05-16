@@ -8,23 +8,25 @@ function alertDoubleProd() {
 function rapAdded() {
     alert('La rapport a bien été ajouté. ');
 }
+function modifOk() {
+    alert('Les modifications ont bien été faites. ');
+}
+modifOk
 
 // RANGE COEF RAPPORT FORM
-function showMainTstatValue(newValue)
-{
- 	document.getElementById("rangeShow").innerHTML = newValue;
+function showMainTstatValue(newValue) {
+    document.getElementById("rangeShow").innerHTML = newValue;
 }
 
 //CONSULT RAPPORT
 
 function verifSuppression() {
-    $verif=confirm("Êtes vous certain de supprimer ces éléments ?");
-	if ($verif==false)
-	{
+    $verif = confirm("Êtes vous certain de supprimer ces éléments ?");
+    if ($verif == false) {
         document.getElementById("supprChecked").checked = false;
 
-	}
-	return $verif;
+    }
+    return $verif;
 }
 
 
@@ -33,10 +35,10 @@ function verifSuppression() {
 function openNav() {
     document.getElementById("mySidebar").style.width = "250px";
     document.getElementById("main").style.marginLeft = "250px";
-  }
-  
-  /* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
-  function closeNav() {
+}
+
+/* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
+function closeNav() {
     document.getElementById("mySidebar").style.width = "0";
     document.getElementById("main").style.marginLeft = "0";
-  } 
+} 
