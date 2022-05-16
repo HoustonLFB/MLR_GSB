@@ -52,6 +52,10 @@ $rapportAll = $resBDrapport->fetchAll();
             ";
         unset($_SESSION['supprDone']);
     }
+    if (isset($_SESSION['modifOk'])) {
+        echo '<script type="text/javascript">modifOk();</script>';
+        unset($_SESSION['modifOk']);
+    }
     ?>
     <form method='POST' name='supprRapport'>
         <table id="tableConsultRap">
