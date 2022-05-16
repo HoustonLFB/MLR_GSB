@@ -149,73 +149,138 @@ a {
 }
 #FormGr1 {
   display: grid;
-  grid-template-rows: 75px;
-  grid-template-columns: repeat(2, 500px);
-  grid-gap: 10px;
+  grid-template-rows: 80px;
+  grid-template-columns: repeat(2, 400px);
+  grid-gap: 75px;
   margin-top: 20px;
   margin-bottom: 20px;
   border: 2px solid rgba(10, 10, 10, 0.6);
-  border-radius: 50px;
-  padding: 25px 5px 25px 5px;
+  border-radius: 40px;
+  padding: 25px 75px 25px 75px;
+}
+#tittle1{
+  background-color: #daf9fc;
+  position: absolute;
+  margin-top: -41px;
+  margin-left: -12px;
+  font-size: 22px;
 }
 #FormGr2 {
   display: grid;
-  grid-template-rows: 150px;
-  grid-template-columns: repeat(2, 500px);
-  grid-gap: 10px;
+  grid-template-rows: 80px;
+  grid-template-columns: repeat(2, 400px);
+  grid-gap: 75px;
   margin-top: 20px;
   margin-bottom: 20px;
+  border: 2px solid rgba(10, 10, 10, 0.6);
+  border-radius: 40px;
+  padding: 25px 75px 25px 75px;
+  margin-top: 50px;
+}
+#tittle2{
+  background-color: #daf9fc;
+  position: absolute;
+  margin-top: -41px;
+  margin-left: -12px;
+  font-size: 22px;
 }
 #FormGr3 {
   display: grid;
-  grid-template-rows: 150px;
-  grid-template-columns: repeat(2, 500px);
-  grid-gap: 10px;
+  grid-template-rows: 80px;
+  grid-template-columns: repeat(2, 400px);
+  grid-gap: 75px;
   margin-top: 20px;
   margin-bottom: 20px;
+  border: 2px solid rgba(10, 10, 10, 0.6);
+  border-radius: 40px;
+  padding: 25px 75px 25px 75px;
+  margin-top: 50px;
+}
+#tittle3{
+  background-color: #daf9fc;
+  position: absolute;
+  margin-top: -41px;
+  margin-left: -12px;
+  font-size: 22px;
+}
+#FormGr4 {
+  display: grid;
+  grid-template-rows: 140px;
+  grid-template-columns: repeat(2, 400px);
+  grid-gap: 75px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 2px solid rgba(10, 10, 10, 0.6);
+  border-radius: 40px;
+  padding: 25px 75px 25px 75px;
+  margin-top: 50px;
+}
+#tittle4{
+  background-color: #daf9fc;
+  position: absolute;
+  margin-top: -41px;
+  margin-left: -12px;
+  font-size: 22px;
 }
 #Form1 {
-  background-color: #ceeeaa;
+  background-color: #bbe5e9;
+  border-radius: 10px;
 }
 #Form2 {
-  background-color: #eeb4aa;
+  background-color: #bbe5e9;
+  border-radius: 10px;
 }
 #Form3 {
-  background-color: #eec4aa;
+  background-color: #bbe5e9;
+  border-radius: 10px;
 }
 #Form4 {
-  background-color: #eed4aa;
+  background-color: #bbe5e9;
+  border-radius: 10px;
 }
 #Form5 {
-  background-color: #eee4aa;
+  background-color: #bbe5e9;
+  border-radius: 10px;
 }
 #Form6 {
-  background-color: #dceeaa;
+  background-color: #bbe5e9;
+  border-radius: 10px;
 }
 #Form7 {
-  background-color: #b5eeaa;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  background-color: #bbe5e9;
+  border-radius: 10px;
+  text-align: center;
 }
 #Form8 {
-  background-color: #aaeebb;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  background-color: #bbe5e9;
+  border-radius: 10px;
 }
-
+#rapBilan{
+  width: 382px;
+  height: 75px;
+  margin-left: 5px;
+}
 .scrollbarthin {
   scrollbar-width: thin;
 }
 #smiles_line {
   display: grid;
   grid-template-columns: repeat(5, 37px);
-  grid-gap: 10px;
-  margin-left: 9px;
+  grid-gap: 19px;
 }
 .smiles {
   height: 37px;
   width: 36.3px;
 }
+#submitRapport{
+  border: 1px solid rgba(10, 10, 10, 0.6);
+  border-radius: 10px;
+  padding: 8px 16px 8px 16px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  font-size: 15px;
+}
+
 /*
 **************************************************************************************************
 *      ConsultMedoc     **************************************************************************

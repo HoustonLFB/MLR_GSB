@@ -88,6 +88,10 @@ $medicamentsAll = $resDBmedicament->fetchAll();
                     <div id='Form2' class="aligncenter">
                         Remplaçant <input type="checkbox" name="remplaDemande" id="remplaDemande" class="remplaON"><br>
                     </div>
+
+                    <div id="tittle1">
+                        <p>  Informations Praticien  </p>
+                    </div>
                 </div>
 
                 <div id="FormGr2">
@@ -103,6 +107,10 @@ $medicamentsAll = $resDBmedicament->fetchAll();
                             <option value="3">Chute de prescriptions</option>
                             <option value="4">Remplaçant</option>
                         </select> <br>
+                    </div>
+
+                    <div id="tittle2">
+                        <p>  Informations Visite  </p>
                     </div>
                 </div>
 
@@ -130,27 +138,36 @@ $medicamentsAll = $resDBmedicament->fetchAll();
                             ?>
                         </select><br>
                     </div>
-                </div>
 
-                <div id='Form7'>
-                    Coefficient de confiance : <br>
-                    <input name="rangeCoef" type="range" style="width: 200px; height: 40px" min="1" max="5" step="1">
-                    <div id="smiles_line">
-                        <div><img src="..\assets\img\smile\Smile1.png" class="smiles"></img></div>
-                        <div><img src="..\assets\img\smile\Smile2.png" class="smiles"></img></div>
-                        <div><img src="..\assets\img\smile\Smile3.png" class="smiles"></img></div>
-                        <div><img src="..\assets\img\smile\Smile4.png" class="smiles"></img></div>
-                        <div><img src="..\assets\img\smile\Smile5.png" class="smiles"></img></div>
+                    <div id="tittle3">
+                        <p>  Informations Médicaments  </p>
                     </div>
                 </div>
+                <div id="FormGr4">
+                    <div id='Form7'>
+                        <p>Coefficient de confiance :</p>
+                        <input name="rangeCoef" type="range" style="width: 245px; height: 40px" min="1" max="5" step="1">
+                        <div id="smiles_line" class="aligncenter">
+                            <div><img src="..\assets\img\smile\Smile1.png" class="smiles"></img></div>
+                            <div><img src="..\assets\img\smile\Smile2.png" class="smiles"></img></div>
+                            <div><img src="..\assets\img\smile\Smile3.png" class="smiles"></img></div>
+                            <div><img src="..\assets\img\smile\Smile4.png" class="smiles"></img></div>
+                            <div><img src="..\assets\img\smile\Smile5.png" class="smiles"></img></div>
+                        </div>
+                    </div>
 
+                    <div id='Form8'>
+                        <p class="aligncenter">Bilan du rapport : </p>
+                        <textarea name="rapBilan" id="rapBilan"></textarea><br>
+                    </div>
 
-                <div id='Form8'>
-                    Bilan du rapport : <br>
-                    <textarea name="rapBilan" id="rapBilan"></textarea><br>
+                    <div id="tittle4">
+                        <p>  Informations Supplémentaires  </p>
+                    </div>
                 </div>
-
-                <input type="submit">
+                <div class="center">
+                    <input type="submit" id="submitRapport">
+                </div>
             </form>
 
         </div>
