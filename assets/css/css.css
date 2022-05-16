@@ -38,9 +38,11 @@ h4 {
   font-size: 30px;
 }
 a {
-  color: #0608af;
+  color: #2802ff;
 }
-
+a:hover{
+  color: #028cfd;
+}
 .main {
   padding-top: 20px;
 }
