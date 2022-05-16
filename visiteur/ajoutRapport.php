@@ -31,6 +31,11 @@ if ($medoc1 == $medoc2) {
     exit();
 }
 
+//retrain des carectères problématiques
+$rapBilan = str_replace('"', '\"', $rapBilan);
+$rapBilan = str_replace("'", "\'", $rapBilan);
+
+
 //CREATION de la requete
 if (empty($remplaNom)) { //SI PAS DE REMPLACANT
     $reqSQLinto = "INSERT INTO rapportVisite VALUES (NULL, '$IDuser', $praID, NULL, now(), '$dateVisite', '$rapBilan', '$rapMotif', '$medoc1', '$medoc2', $coefConf);";
