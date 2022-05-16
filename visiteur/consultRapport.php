@@ -53,11 +53,11 @@ $rapportAll = $resBDrapport->fetchAll();
         unset($_SESSION['supprDone']);
     }
     ?>
-    <form method='POST' name='supprRapport' onsubmit=" return verifSuppression(this)">
+    <form method='POST' name='supprRapport'>
         <table id="tableConsultRap">
             <thead>
                 <tr>
-                    <th colspan="1"><button formaction='supprRapport.php'>Supprimer</button><br><button formaction='modifRapport.php' style="padding: 1px 12px;">Modifier</button></th>
+                    <th colspan="1"><button formaction='supprRapport.php' onclick="return verifSuppression(this)">Supprimer</button><br><button formaction='modifRapportForm.php' style=" padding: 1px 12px;">Modifier</button></th>
                     <th colspan="10">Consultation des Rapports de Visites</th>
                 </tr>
                 <tr>
