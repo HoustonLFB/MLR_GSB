@@ -70,6 +70,6 @@ for ($cpt = 0; $cpt < $nbRap; $cpt++) {
     $reqSQLmodifDateRap = "UPDATE rapportVisite SET rapDateRapport=now() WHERE rapID = '$rapAmodif' ";
 }
 
-
+unset($_SESSION['supprChecked']);
 $_SESSION['modifOk'] = True;
 header("Location: consultRapport.php");
