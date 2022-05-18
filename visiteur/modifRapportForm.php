@@ -63,7 +63,7 @@ $motifAll = array(
             <thead>
                 <tr>
                     <th colspan="1"><button type="button" onclick="window.location.href='consultRapport.php'">Retour</button></th>
-                    <th colspan="9">Modification d'un Rapport de Visite</th>
+                    <th colspan="9">Modification Rapports de Visite - GSB</th>
                 </tr>
                 <tr>
                     <th width="150px" class='BborderR'>Visiteur</th>
