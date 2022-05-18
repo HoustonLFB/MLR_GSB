@@ -15,7 +15,7 @@ $resultatDB = $connexion->query($reqSQLlogin);
 $ligneDB = $resultatDB->fetch();
 //RECUPERATION DES DIFFERENTES INFOS DANS VARIABLE 
 $passBD = $ligneDB[1];
-$IDuser = $ligneDB[2];
+$IDuser = $ligneDB[2]; //matricule
 $NIVuser = $ligneDB[3];
 
 //VERIF BON MDP
@@ -24,7 +24,7 @@ $ok = password_verify($userpass, $passBD);
 if ($ok) {
     //VARIABLES DE SESSION DES INFOS DE L'USER
     $_SESSION['logged'] = True;
-    $_SESSION['IDuser'] = $IDuser;
+    $_SESSION['IDuser'] = $IDuser; //matricule
     $_SESSION['NIVuser'] = $NIVuser;
 
     //AJOUT HISTORIQUE CONNEX BD
