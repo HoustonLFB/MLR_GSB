@@ -22,14 +22,11 @@ $rapportAll = $resBDrapport->fetchAll();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../assets/img/favicon.ico" />
     <title>Consultation Rapports - GSB</title>
-
 </head>
 
 <body>
     <?php
     include("../includes/nav.inc.php");
-    ?>
-    <?php
     include("../includes/headerGSB.inc.php");
     ?>
 
