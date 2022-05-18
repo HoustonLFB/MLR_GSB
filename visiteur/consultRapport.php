@@ -5,9 +5,17 @@ include("../includes/connexionbdd.inc.php");
 include("../includes/historique.inc.php");
 include("../includes/verifConnexVisit.inc.php");
 
-$reqSQLconsultRap = "SELECT * FROM rapportVisite";
-$resBDrapport = $connexion->query($reqSQLconsultRap);
-$rapportAll = $resBDrapport->fetchAll();
+if (!isset($_SESSION['reqSQLConsult'])) {
+    $visMat = $_SESSION['IDuser'];
+    $reqSQLconsultRap = "SELECT * FROM rapportVisite WHERE visMatricule='$visMat'";
+    $resBDrapport = $connexion->query($reqSQLconsultRap);
+    $rapportAll = $resBDrapport->fetchAll();
+} else {
+    $reqSQLconsultRap = $_SESSION['reqSQLConsult'];
+    $resBDrapport = $connexion->query($reqSQLconsultRap);
+    $rapportAll = $resBDrapport->fetchAll();
+    unset($_SESSION['reqSQLConsult']);
+}
 
 ?>
 
@@ -28,6 +36,7 @@ $rapportAll = $resBDrapport->fetchAll();
     <?php
     include("../includes/nav.inc.php");
     include("../includes/headerGSB.inc.php");
+    include("filtrageRapportForm.php");
     ?>
 
     <?php
