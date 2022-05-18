@@ -128,9 +128,6 @@ $motifAll = array(
                         $motif = "Remplaçant";
                         break;
                 }
-                //
-
-
 
                 //AFFICHAGE 
                 echo "
