@@ -1,8 +1,8 @@
 <?php
 // D�finitions de constantes pour la connexion � MySQL
 $hote = "95.179.217.85";
-$login = "pmadistant";
-$mdp = "&#Q2uwMCeGy9";
+$login = "gsb";
+$mdp = "mZe6GmN9pYGmcj";
 $nombd = "mlr_gsb";
 
 // Connection au serveur
