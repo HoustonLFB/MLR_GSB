@@ -159,7 +159,7 @@ $medicamentsAll = $resDBmedicament->fetchAll();
 
                     <div id='Form8'>
                         <p class="aligncenter">Bilan du rapport : </p>
-                        <textarea name="rapBilan" id="rapBilan" noresize></textarea><br>
+                        <textarea name="rapBilan" id="rapBilan" style='resize: none;'></textarea><br>
                     </div>
 
                     <div id="tittle4">
