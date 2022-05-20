@@ -32,11 +32,13 @@ $medocAll = $resBDmedoc->fetchAll();
         <?php
         include("../includes/headerGSB.inc.php");
         ?>
-
+        
         <table id="tableConsultMedoc">
             <thead>
                 <tr>
-                    <th colspan="2">Consultation des Médicaments</th>
+                    <th colspan="2"><div id="titreMedoc">
+                        Consulatation des Médicaments
+                    </div></th>
                 </tr>
                 <tr>
                     <th width="200px" class='BborderR'>Deport Légal</th>

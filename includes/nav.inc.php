@@ -27,7 +27,7 @@
     $visPrenom = $visiteur[2];
 
     //AFFICHAGE DU NOM
-    echo "Vous êtes connecté en tant que $NIVnom: $visNom $visPrenom, $IDuser";
+    echo "Vous êtes connecté en tant que <b>$NIVnom</b> : $visNom $visPrenom, $IDuser";
     ?>
 
     <div id="links">
@@ -39,6 +39,6 @@
         - &nbsp;
         <a href="consultMedoc.php">Consultation médicaments</a> &nbsp;
         - &nbsp;
-        <a href="../logout.php">Se déconnecter</a>
+        <a href="../logout.php"><b>Se déconnecter</b></a>
     </div>
 </nav>

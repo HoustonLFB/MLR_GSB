@@ -5,11 +5,11 @@ $resBDpra = $connexion->query($reqSQLconsultPra);
 $praAll = $resBDpra->fetchAll();
 ?>
 
-<form action='filtrageRapport.php' method="POST">
-    Affichage rapports : <br>
+<form action='filtrageRapport.php' method="POST" id="filtrage">
+    <b>Affichage rapports : </b>
     <input type="radio" value="1" name="affRap" checked> Les vôtres &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <input type="radio" value="2" name="affRap"> Tout le monde<br>
-    Par praticiens&nbsp;:&nbsp;
+    <b>Par praticiens : </b>
     <?php
     echo "<select name='choixPra' style='width: 150px'>";
     echo "<option value=''>Tous</option>";
