@@ -22,12 +22,12 @@ $resDBmedoc = $connexion->query($reqSQLmedoc);
 $AllMedoc = $resDBmedoc->fetchAll();
 
 //MOTIF
-// 1 Renouvellement
+// 1 Actualiser
 // 2 Nouveauté
 // 3 Chute de prescriptions
 // 4 Remplaçant
 $motifAll = array(
-    '1' => "Renouvellement",
+    '1' => "Actualiser",
     '2' => "Nouveauté",
     '3' => "Chute de prescriptions",
     '4' => "Remplaçant",
@@ -110,13 +110,13 @@ $motifAll = array(
                 $medoc2 = $resBDmedoc2->fetch();
 
                 //MOTIF
-                // 1 Renouvellement
+                // 1 Actualiser
                 // 2 Nouveauté
                 // 3 Chute de prescriptions
                 // 4 Remplaçant
                 switch ($rapOcc[7]) {
                     case "1":
-                        $motif = "Renouvellement";
+                        $motif = "Actualiser";
                         break;
                     case "2":
                         $motif = "Nouveauté";
