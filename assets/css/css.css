@@ -33,7 +33,7 @@ h1 {
   text-align: center;
 }
 h4 {
-  color: #000000;
+  color: rgb(36, 36, 36);
   text-align: center;
   font-size: 30px;
 }
@@ -42,9 +42,6 @@ a {
 }
 a:hover{
   color: #028cfd;
-}
-.main {
-  padding-top: 20px;
 }
 
 /*
@@ -105,39 +102,52 @@ a:hover{
 *      Accueil     *******************************************************************************
 **************************************************************************************************
 */
-
+#titreaccueil{
+  margin-top: 50px;
+}
 .Position {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 90px;
+  grid-gap: 80px;
   margin-top: 80px;
-  margin-right: 40px;
-  margin-left: 40px;
+  margin-right: 80px;
+  margin-left: 80px;
 }
-
 #RapportdeVisite {
-  border: 2px double #ffffff;
+  border: 2px solid #333;
   border-radius: 20px;
-  background: linear-gradient(#77aadd, #90e0e7);
+  background: linear-gradient(#90e0e7, #77aadd);
   padding: 25px 5px 25px 5px;
+}
+#RapportdeVisite:hover{
+  background: linear-gradient(rgba(144, 224, 231, 0.75), rgba(119, 170, 221, 0.75));
 }
 #ConsultationdesRapports {
-  border: 2px double #ffffff;
+  border: 2px solid #333;
   border-radius: 20px;
-  background: linear-gradient(#77aadd, #90e0e7);
+  background: linear-gradient(#90e0e7, #77aadd);
   padding: 25px 5px 25px 5px;
+}
+#ConsultationdesRapports:hover{
+  background: linear-gradient(rgba(144, 224, 231, 0.75), rgba(119, 170, 221, 0.75));
 }
 #Medicaments {
-  border: 2px double #ffffff;
+  border: 2px solid #333;
   border-radius: 20px;
-  background: linear-gradient(#77aadd, #90e0e7);
+  background: linear-gradient(#90e0e7, #77aadd);
   padding: 25px 5px 25px 5px;
 }
+#Medicaments:hover{
+  background: linear-gradient(rgba(144, 224, 231, 0.75), rgba(119, 170, 221, 0.75));
+}
 #Praticiens {
-  border: 2px double #ffffff;
+  border: 2px solid #333;
   border-radius: 20px;
-  background: linear-gradient(#77aadd, #90e0e7);
+  background: linear-gradient(#90e0e7, #77aadd);
   padding: 25px 5px 25px 5px;
+}
+#Praticiens:hover{
+  background: linear-gradient(rgba(144, 224, 231, 0.75), rgba(119, 170, 221, 0.75));
 }
 /*
 **************************************************************************************************
@@ -148,6 +158,9 @@ a:hover{
   display: flex;
   align-items: center;
   justify-content: center;
+}
+#formRapport{
+  margin-top: 80px;
 }
 #FormGr1 {
   display: grid;
@@ -294,7 +307,7 @@ a:hover{
 #titreMedoc {
   border: 2px solid #333;
   border-radius: 15px;
-  background: linear-gradient(#77aadd, #90e0e7);
+  background: linear-gradient(#90e0e7, #77aadd);
   padding: 15px 10px 15px 10px;
   width: 400px;
   text-align: center;
@@ -320,7 +333,7 @@ a:hover{
 #titrePra {
   border: 2px solid #333;
   border-radius: 15px;
-  background: linear-gradient(#77aadd, #90e0e7);
+  background: linear-gradient(#90e0e7, #77aadd);
   padding: 15px 10px 15px 10px;
   width: 400px;
   text-align: center;
@@ -348,7 +361,7 @@ a:hover{
 #titreCR {
   border: 2px solid #333;
   border-radius: 15px;
-  background: linear-gradient(#77aadd, #90e0e7);
+  background: linear-gradient(#90e0e7, #77aadd);
   padding: 15px 10px 15px 10px;
   width: 400px;
   text-align: center;

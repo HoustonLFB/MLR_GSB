@@ -28,16 +28,18 @@ $medocAll = $resBDmedoc->fetchAll();
     <?php
     include("../includes/nav.inc.php");
     ?>
+    <?php
+    include("../includes/headerGSB.inc.php");
+    ?>
+
     <div class="main">
-        <?php
-        include("../includes/headerGSB.inc.php");
-        ?>
+        
         
         <table id="tableConsultMedoc">
             <thead>
                 <tr>
                     <th colspan="2"><div id="titreMedoc">
-                        Consulatation des Médicaments
+                        Consultation des Médicaments
                     </div></th>
                 </tr>
                 <tr>
