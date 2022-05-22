@@ -35,7 +35,9 @@ $praAll = $resBDpra->fetchAll();
     <table id="tableConsultPra">
         <thead>
             <tr>
-                <th colspan="2"><div id="titrePra">Consultation des Praticiens</div></th>
+                <th colspan="2">
+                    <div id="titrePra">Consultation des Praticiens</div>
+                </th>
             </tr>
             <tr>
                 <th width="100px" class='BborderR'>ID</th>
@@ -48,8 +50,6 @@ $praAll = $resBDpra->fetchAll();
             $praID = $occurence[0];
             $praNom = $occurence[1];
             $praPrenom = $occurence[2];
-
-
 
             echo "
                 <tr>

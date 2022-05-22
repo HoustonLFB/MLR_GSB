@@ -31,7 +31,7 @@ if ($medoc1 == $medoc2) {
     exit();
 }
 
-//retrain des carectères problématiques
+//retrait des carectères problématiques
 $rapBilan = str_replace('"', '\"', $rapBilan);
 $rapBilan = str_replace("'", "\'", $rapBilan);
 
