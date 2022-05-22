@@ -3,9 +3,10 @@ session_start();
 
 include('../includes/connexionbdd.inc.php');
 
-//nombre de rapports
-$nbRap = count($_POST['motif']);
+//recup rap
 $rapAmodifAll = $_SESSION['supprChecked'];
+//nombre de rapports
+$nbRap = count($rapAmodifAll);
 
 //RECUPERATION DES INFOS de req DB
 $reqSQL = "SELECT * FROM `rapportVisite` WHERE rapID = ' ";
@@ -46,6 +47,7 @@ for ($cpt = 0; $cpt < $nbRap; $cpt++) {
         $reqSQLmodifPra = "UPDATE rapportVisite SET praID='$praID' WHERE rapID = '$rapAmodif' ";
         $connexion->exec($reqSQLmodifPra);
     }
+
     //si changement date visite
     if ($dateVisite != $rapAllbase[$cpt][5]) {
         $reqSQLmodifDateVis = "UPDATE rapportVisite SET rapDateVisite='$dateVisite' WHERE rapID = '$rapAmodif' ";
