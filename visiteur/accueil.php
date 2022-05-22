@@ -26,26 +26,26 @@ include("../includes/verifConnexVisit.inc.php");
     ?>
     <div class="main">
         <div>
-            <h1>ACCUEIL VISITEUR</h1>
+            <h1 id="titreaccueil">ACCUEIL VISITEUR</h1>
         </div>
         <div class="Position">
             <a href="rapportForm.php">
-                <div id="RapportdeVisite">
+                <div id="RapportdeVisite" class="bouttonAcceuil">
                     <h4>Rapport de Visite</h4>
                 </div>
             </a>
             <a href="consultRapport.php">
-                <div id="ConsultationdesRapports">
+                <div id="ConsultationdesRapports" class="bouttonAcceuil">
                     <h4>Consultation des Rapports</h4>
                 </div>
             </a>
             <a href="consultMedoc.php">
-                <div id="Medicaments">
+                <div id="Medicaments" class="bouttonAcceuil">
                     <h4>Consultation des Médicaments</h4>
                 </div>
             </a>
             <a href="consultPra.php">
-                <div id="Praticiens">
+                <div id="Praticiens" class="bouttonAcceuil">
                     <h4>Consultation des Praticiens</h4>
                 </div>
             </a>

@@ -32,34 +32,40 @@ $praAll = $resBDpra->fetchAll();
     include("../includes/headerGSB.inc.php");
     ?>
 
-    <table id="tableConsultPra">
-        <thead>
-            <tr>
-                <th colspan="2">
-                    <div id="titrePra">Consultation des Praticiens</div>
-                </th>
-            </tr>
-            <tr>
-                <th width="100px" class='BborderR'>ID</th>
-                <th width="400px" class='BborderL'>Nom</th>
-            </tr>
-        </thead>
+    <div class="main">
 
-        <?php
-        foreach ($praAll as $occurence) {
-            $praID = $occurence[0];
-            $praNom = $occurence[1];
-            $praPrenom = $occurence[2];
-
-            echo "
+        <table id="tableConsultPra">
+            <thead>
                 <tr>
-                    <td class='borderR'>$praID</td>
-                    <td class='borderL'>$praNom $praPrenom</td>
+                    <th colspan="2">
+                        <div id="titrePra">Consultation des Praticiens</div>
+                    </th>
                 </tr>
-            ";
-        }
-        ?>
-    </table>
+                <tr>
+                    <th width="100px" class='BborderR'>ID</th>
+                    <th width="400px" class='BborderL'>Nom</th>
+                </tr>
+            </thead>
+
+            <?php
+            foreach ($praAll as $occurence) {
+                $praID = $occurence[0];
+                $praNom = $occurence[1];
+                $praPrenom = $occurence[2];
+
+
+
+                echo "
+                    <tr>
+                        <td class='borderR'>$praID</td>
+                        <td class='borderL'>$praNom $praPrenom</td>
+                    </tr>
+                ";
+            }
+            ?>
+        </table>
+
+    </div>
 
 </body>
 

@@ -37,10 +37,12 @@ $medicamentsAll = $resDBmedicament->fetchAll();
     <?php
     include("../includes/nav.inc.php");
     ?>
+    <?php
+    include("../includes/headerGSB.inc.php");
+    ?>
+
     <div class="main">
-        <?php
-        include("../includes/headerGSB.inc.php");
-        ?>
+        
         <div class="aligncenter">
             <?php
             // AFFICHAGE DES ERREURS
@@ -73,7 +75,7 @@ $medicamentsAll = $resDBmedicament->fetchAll();
             }
             ?>
         </div>
-        <div name="formRapport" class="aligncenter">
+        <div name="formRapport" class="aligncenter" id="formRapport">
             <form action="ajoutRapport.php" method="POST">
                 <div id="FormGr1">
                     <div id='Form1' class="aligncenter">
