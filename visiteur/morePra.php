@@ -36,16 +36,12 @@ $pra = $praAffichage->fetch();
     <table id="tableConsultMedoc">
         <thead>
             <tr>
-                <th colspan="4">
+                <th colspan="5">
                     <div id="titreMedoc">
                         Description du Praticien
                     </div>
 
                 </th>
-                <th>
-                    <div>
-                        <a href='consultPra.php'><button type="button"> Retour</button></a>
-                    </div>
             </tr>
             <tr>
                 <th width="200px" class='BborderR'>Nom</th>
@@ -68,3 +64,7 @@ $pra = $praAffichage->fetch();
             ";
 
         ?>
+    </table>
+    <div id="boutonPra" class="aligncenter">
+        <a href='consultPra.php'><button type="button"> Retour</button></a>
+    </div>

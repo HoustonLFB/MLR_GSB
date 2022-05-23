@@ -37,7 +37,7 @@ $praAll = $resBDpra->fetchAll();
             <table id="tableConsultPra">
                 <thead>
                     <tr>
-                        <th colspan="2">
+                        <th colspan="3">
                             <div id="titrePra">Consultation des Praticiens</div>
                         </th>
                     </tr>
