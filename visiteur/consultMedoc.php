@@ -33,36 +33,40 @@ $medocAll = $resBDmedoc->fetchAll();
     ?>
 
     <div class="main">
-        
-        
-        <table id="tableConsultMedoc">
-            <thead>
-                <tr>
-                    <th colspan="2"><div id="titreMedoc">
-                        Consultation des Médicaments
-                    </div></th>
-                </tr>
-                <tr>
-                    <th width="200px" class='BborderR'>Deport Légal</th>
-                    <th width="200px" class='BborderL'>Nom</th>
-                </tr>
-            </thead>
 
-            <?php
-            foreach ($medocAll as $occurence) {
-                $codeMed = $occurence[0];
-                $nomMed = $occurence[1];
+        <form method='POST'>
+            <table id="tableConsultMedoc">
+                <thead>
+                    <tr>
+                        <th colspan="3">
+                            <div id="titreMedoc">
+                                Consultation des Médicaments
+                            </div>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th width="200px" class='BborderR'>Deport Légal</th>
+                        <th width="200px" class='BborderR'>Nom</th>
+                        <th width="100px" class='BborderL'>Description</th>
+                    </tr>
+                </thead>
 
-                echo "
+                <?php
+                foreach ($medocAll as $occurence) {
+                    $codeMed = $occurence[0];
+                    $nomMed = $occurence[1];
+
+                    echo "
                 <tr>
                     <td class='borderR'>$codeMed</td>
-                    <td class='borderL'>$nomMed</td>
+                    <td class='borderR'>$nomMed</td>
+                    <td class='borderL'><button formaction='moreMedoc.php' name='nomMedoc' value='$codeMed'>Voir plus</button></td>
                 </tr>
             ";
-            }
-            ?>
-        </table>
-
+                }
+                ?>
+            </table>
+        </form>
     </div>
 
 
