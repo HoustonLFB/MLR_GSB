@@ -31,6 +31,10 @@ session_start();
                 06.66.13.96.21
             </div>
             <div id="numeroAssist">
+                <b>Courriel d'assistance :</b><br />
+                contact@mlr-gsb.site
+            </div>
+            <div id="numeroAssist">
                 <a href="index.php">Retour</a>
             </div>
         </div>
